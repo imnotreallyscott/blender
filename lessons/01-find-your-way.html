@@ -23,8 +23,6 @@
     <label><input type="checkbox" id="l1-view"> I can orbit, zoom, and pan with the Magic Mouse.</label>
     <label><input type="checkbox" id="l1-select"> I can select and deselect the cube.</label>
     <label><input type="checkbox" id="l1-save"> I saved <code>lesson01.blend</code>.</label>
-    <label><input type="checkbox" id="l1-copies"> I made three cubes with Shift + D.</label>
-    <label><input type="checkbox" id="l1-project"> I stacked the three cubes in one column.</label>
   </div>
 </aside>
 <main>
@@ -62,48 +60,8 @@
     <strong>Mac reminder:</strong> Blender uses <kbd>Cmd</kbd> where Windows uses <kbd>Ctrl</kbd>. Undo is <kbd>Cmd</kbd> + <kbd>Z</kbd>. Undo is your safety net, so use it freely.
   </div>
 
-  <h2>Project: stacked "716" blocks</h2>
-  <p>You will end with three cubes stacked in one column, one on top of the other. The default cube is 2 units tall, so each copy moves up exactly 2 units.</p>
-
-  <figure class="fig wide">
-    <span class="fig-label">Your finished scene (screenshot from a Mac)</span>
-    <img src="../img/lesson1-finished.png" alt="Blender 5.2.1 with three cubes side by side, the right cube selected and outlined in orange, and the Outliner listing Camera, Cube, Cube.001, Cube.002, and Light">
-    <figcaption><strong>What to look at:</strong> this screenshot shows three cubes side by side, with the right one outlined in orange (selected). It is not the finished stack yet. Follow the stacking steps below to finish.</figcaption>
-  </figure>
-
-  <figure class="fig">
-    <svg viewBox="0 0 640 260" role="img" aria-label="Finished project: three cubes stacked in one column">
-      <rect class="f-panel" x="6" y="6" width="628" height="248" rx="12"/>
-      <g transform="translate(250,20)">
-        <polygon points="0,40 60,40 60,100 0,100" class="f-face-m"/>
-        <polygon points="0,40 22,20 82,20 60,40" class="f-face-l"/>
-        <polygon points="60,40 82,20 82,80 60,100" class="f-face-d"/>
-      </g>
-      <g transform="translate(250,100)">
-        <polygon points="0,40 60,40 60,100 0,100" class="f-face-m"/>
-        <polygon points="0,40 22,20 82,20 60,40" class="f-face-l"/>
-        <polygon points="60,40 82,20 82,80 60,100" class="f-face-d"/>
-      </g>
-      <g transform="translate(250,180)">
-        <polygon points="0,40 60,40 60,100 0,100" class="f-face-m"/>
-        <polygon points="0,40 22,20 82,20 60,40" class="f-face-l"/>
-        <polygon points="60,40 82,20 82,80 60,100" class="f-face-d"/>
-      </g>
-    </svg>
-    <figcaption><strong>Finished product:</strong> three cubes in one column, one on top of the other. The drawing is simplified: in Blender you will see the full 3D cubes.</figcaption>
-  </figure>
-
-  <ol class="steps">
-    <li><span class="chip chip-tool">Tool</span> Click the cube so it's selected (orange outline).</li>
-    <li><span class="chip">Key</span> Press <kbd>Shift</kbd> + <kbd>D</kbd>, then press <kbd>Esc</kbd>. A copy appears in the same spot and stays there. <span class="verify">Shift+D and Esc behavior unverified on your Mac</span></li>
-    <li><span class="chip">Key</span> Press <kbd>G</kbd>, then <kbd>Z</kbd>, type <kbd>2</kbd>, and press <kbd>Enter</kbd>. The copy moves straight up exactly 2 units and sits on top of the original. <span class="verify">typed-number move unverified on your Mac</span></li>
-    <li><span class="chip chip-check">Check</span> Click the copy. In the Properties panel, the Object tab shows Location Z as 2 m.</li>
-    <li><span class="chip">Key</span> Press <kbd>Shift</kbd> + <kbd>D</kbd>, then <kbd>Esc</kbd> to make a third cube. Press <kbd>G</kbd>, <kbd>Z</kbd>, type <kbd>2</kbd>, and press <kbd>Enter</kbd>. This cube sits on top of the second.</li>
-    <li><span class="chip chip-check">Check</span> Press <kbd>1</kbd> for the front view. You should see three cubes stacked in one column, with no gap.</li>
-    <li><span class="chip">Key</span> Save with <kbd>Cmd</kbd> + <kbd>S</kbd> to <code>lesson01.blend</code>.</li>
-  </ol>
-
-  
+  <h2>Project: save your first file</h2>
+  <p>Your project is a saved file, <code>lesson01.blend</code>, with the default scene in it. You will open it again in Lesson 2.</p>
 
   <div class="nav-row">
     <a href="00-mac-setup.html">← Mac setup</a>

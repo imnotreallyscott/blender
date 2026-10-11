@@ -24,6 +24,7 @@
     <label><input type="checkbox" id="l2-rotate"> I rotated an object with <kbd>R</kbd>.</label>
     <label><input type="checkbox" id="l2-scale"> I stretched an object along one axis with <kbd>S</kbd>.</label>
     <label><input type="checkbox" id="l2-n"> I opened the N panel and typed an exact number.</label>
+    <label><input type="checkbox" id="l2-stack"> I stacked three cubes in one column with <kbd>G</kbd>, <kbd>Z</kbd>, and a typed number.</label>
     <label><input type="checkbox" id="l2-project"> My block stand is saved.</label>
   </div>
 </aside>
@@ -76,6 +77,25 @@
   <div class="card tip">
     <strong>Why this matters:</strong> Blender measures in units. The N panel shows the numbers. If something looks off, check the numbers instead of guessing.
   </div>
+
+  <h2>Stacking practice</h2>
+  <p>This practice uses the three keys above. <kbd>G</kbd> moves, <kbd>Z</kbd> locks the move to the up direction, and a typed number moves an exact distance. The default cube is 2 units tall, so each copy moves up exactly 2 units.</p>
+
+  <figure class="fig wide">
+    <span class="fig-label">Your finished scene (screenshot from a Mac)</span>
+    <img src="../img/lesson1-finished.png" alt="Blender 5.2.1 with three cubes side by side, the right cube selected and outlined in orange, and the Outliner listing Camera, Cube, Cube.001, Cube.002, and Light">
+    <figcaption><strong>What to look at:</strong> this screenshot shows three cubes side by side, with the right one outlined in orange (selected). It is not the finished stack yet. Follow the stacking practice below to finish.</figcaption>
+  </figure>
+
+  <ol class="steps">
+    <li><span class="chip chip-tool">Tool</span> Click the cube so it's selected (orange outline).</li>
+    <li><span class="chip">Key</span> Press <kbd>Shift</kbd> + <kbd>D</kbd>, then press <kbd>Esc</kbd>. A copy appears in the same spot and stays there. <span class="verify">Shift+D and Esc behavior unverified on your Mac</span></li>
+    <li><span class="chip">Key</span> Press <kbd>G</kbd>, then <kbd>Z</kbd>, type <kbd>2</kbd>, and press <kbd>Enter</kbd>. The copy moves straight up exactly 2 units and sits on top of the original. <span class="verify">typed-number move unverified on your Mac</span></li>
+    <li><span class="chip chip-check">Check</span> Click the copy. In the Properties panel, the Object tab shows Location Z as 2 m.</li>
+    <li><span class="chip">Key</span> Press <kbd>Shift</kbd> + <kbd>D</kbd>, then <kbd>Esc</kbd> to make a third cube. Press <kbd>G</kbd>, <kbd>Z</kbd>, type <kbd>2</kbd>, and press <kbd>Enter</kbd>. This cube sits on top of the second.</li>
+    <li><span class="chip chip-check">Check</span> Press <kbd>1</kbd> for the front view. You should see three cubes stacked in one column, with no gap.</li>
+    <li><span class="chip">Key</span> Save with <kbd>Cmd</kbd> + <kbd>S</kbd> to <code>lesson02.blend</code>.</li>
+  </ol>
 
   <h2>Project: block stand</h2>
   <p>A wide base, a body, and a small head block. It is not a bison yet. It is a shape that teaches the three tools.</p>
