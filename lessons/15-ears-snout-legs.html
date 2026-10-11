@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 15: Ears, snout, and legs · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css?v=6">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
+<div class="layout">
+<aside class="objectives" aria-label="Lesson objectives">
+  <p class="obj-label">Lesson objectives</p>
+  <div class="card goal">
+    <strong>Goal:</strong> Add ears, a snout, and legs by extruding, and use Mirror for matching pieces.
+  </div>
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l15-extrude"> I extruded a face to make an ear.</label>
+    <label><input type="checkbox" id="l15-mirror"> I used Mirror so both ears match.</label>
+    <label><input type="checkbox" id="l15-legs"> I added legs from the body.</label>
+    <label><input type="checkbox" id="l15-save"> My animal parts are saved.</label>
+  </div>
+</aside>
+<main>
+  <h1>Lesson 15: Ears, snout, and legs</h1>
+  <p class="meta">About 14 minutes · Blender 5.2.1 LTS · Mac Mini + Magic Mouse</p>
+
+  <h2>Why this lesson</h2>
+  <p>Animals are made of a head and body with parts attached. You will use two skills you already know: <strong>Extrude</strong> from Lesson 4, and <strong>Mirror</strong> from Lesson 7. Extrude makes new parts from an existing face. Mirror makes the matching side for you.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 220" role="img" aria-label="Block head with two ears on top, a snout, and four legs under a body">
+      <rect class="f-panel" x="6" y="6" width="628" height="208" rx="12"/>
+      <rect x="130" y="50" width="130" height="90" rx="8" class="f-face-m"/>
+      <polygon points="150,50 170,20 190,50" class="f-face-l"/>
+      <polygon points="220,50 240,20 260,50" class="f-face-l"/>
+      <rect x="250" y="80" width="40" height="30" rx="6" class="f-face-d"/>
+      <rect x="300" y="60" width="200" height="90" rx="10" class="f-face-m"/>
+      <rect x="310" y="150" width="30" height="40" rx="4" class="f-face-d"/>
+      <rect x="360" y="150" width="30" height="40" rx="4" class="f-face-d"/>
+      <rect x="420" y="150" width="30" height="40" rx="4" class="f-face-d"/>
+      <rect x="470" y="150" width="30" height="40" rx="4" class="f-face-d"/>
+      <text x="320" y="206" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: head, ears, snout, body, four legs</text>
+    </svg>
+    <figcaption><strong>What to look at:</strong> the ears and legs are added pieces. The snout comes from the head.</figcaption>
+  </figure>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li><span class="chip chip-tool">Tool</span> Open <code>block-head.blend</code> from Lesson 14.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode, then <kbd>3</kbd> for face select.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Click the top face on one side of the head. It turns orange.</li>
+    <li><span class="chip">Key</span> Press <kbd>E</kbd>, move the mouse up, and click. This makes one ear. <span class="verify">Extrude from Lesson 4, unverified on your Mac for this shape</span></li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> to leave Edit Mode, then add a <strong>Mirror</strong> modifier (<strong>Add Modifier &gt; Generate &gt; Mirror</strong>). Axis X should be blue. The second ear appears.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode. Select the front face of the head, press <kbd>E</kbd>, and pull it forward a little. This makes the snout.</li>
+    <li><span class="chip">Key</span> For legs, make a separate cube with <kbd>Shift</kbd> + <kbd>A</kbd>. Press <kbd>S</kbd>, type <kbd>0.3</kbd>, and press <kbd>Enter</kbd> to make it small. Then press <kbd>S</kbd>, <kbd>Z</kbd>, type <kbd>2</kbd>, and press <kbd>Enter</kbd> to stretch it tall. Place four of them under the body with <kbd>G</kbd>.</li>
+    <li><span class="chip chip-check">Check</span> The head, ears, snout, and legs are all present. The two ears and two front legs match.</li>
+    <li><span class="chip">Key</span> Save with <kbd>Cmd</kbd> + <kbd>S</kbd> as <code>animal-parts.blend</code>.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Keep the parts separate:</strong> it's fine to keep ears and legs as separate objects. It makes them easy to move. You can join them later.
+  </div>
+
+  <h2>Project: animal parts</h2>
+  <p>A head with two ears, a snout, a body, and four legs, saved as <code>animal-parts.blend</code>. This is the base for the stylized animal in Lesson 16.</p>
+
+  <div class="nav-row">
+    <a href="14-loop-cuts-head.html">← Lesson 14</a>
+    <a href="16-stylized-animal-checkpoint.html">Next: Lesson 16 →</a>
+  </div>
+</main>
+</div>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 12: Exact sizes · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css?v=6">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
+<div class="layout">
+<aside class="objectives" aria-label="Lesson objectives">
+  <p class="obj-label">Lesson objectives</p>
+  <div class="card goal">
+    <strong>Goal:</strong> Make an object an exact size by typing numbers, so real-world parts fit.
+  </div>
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l12-sidebar"> I opened the N side panel.</label>
+    <label><input type="checkbox" id="l12-dims"> I typed exact Dimensions for an object.</label>
+    <label><input type="checkbox" id="l12-check"> I checked the size against the numbers.</label>
+    <label><input type="checkbox" id="l12-save"> My plant pot is saved.</label>
+  </div>
+</aside>
+<main>
+  <h1>Lesson 12: Exact sizes</h1>
+  <p class="meta">About 12 minutes · Blender 5.2.1 LTS · Mac Mini + Magic Mouse</p>
+
+  <h2>Why exact sizes matter</h2>
+  <p>A 3D model is only useful if it fits the real thing. A phone stand must fit the phone. A pot must fit the plant. Blender measures in units. In the default setup, one unit is one meter. <span class="verify">default unit scale unverified on your 5.2.1 file</span></p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 220" role="img" aria-label="Side panel with Dimensions X, Y, and Z fields">
+      <rect class="f-panel" x="6" y="6" width="628" height="208" rx="12"/>
+      <rect x="380" y="24" width="230" height="180" rx="10" class="f-bg"/>
+      <text x="395" y="50" font-size="15" font-weight="800" class="f-accent">Dimensions</text>
+      <text x="395" y="92" font-size="14" class="f-text">X   0.120 m</text>
+      <text x="395" y="122" font-size="14" class="f-text">Y   0.120 m</text>
+      <text x="395" y="152" font-size="14" class="f-text">Z   0.100 m</text>
+      <text x="40" y="110" font-size="16" class="f-text" font-weight="700">Type a number in a field,</text>
+      <text x="40" y="136" font-size="16" class="f-text" font-weight="700">press Enter, and the</text>
+      <text x="40" y="162" font-size="16" class="f-text" font-weight="700">object resizes exactly.</text>
+      <text x="40" y="200" font-size="13" class="f-muted">Shown: a plant pot 12 cm wide, 10 cm tall.</text>
+    </svg>
+    <figcaption><strong>What to look at:</strong> the three Dimensions fields. Type a number in one and press <kbd>Enter</kbd>.</figcaption>
+  </figure>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li><span class="chip chip-tool">Tool</span> Add a cylinder with <kbd>Shift</kbd> + <kbd>A</kbd>, then <strong>Mesh &gt; Cylinder</strong>. <span class="verify">menu name unverified</span></li>
+    <li><span class="chip">Key</span> Press <kbd>N</kbd> with the mouse over the 3D Viewport to open the side panel. Click the <strong>Item</strong> tab in that panel. <span class="verify">Item tab and Dimensions label unverified on 5.2.1</span></li>
+    <li><span class="chip chip-mouse">Mouse</span> Double-click <strong>X</strong> under Dimensions, type <kbd>0.12</kbd>, and press <kbd>Enter</kbd>.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Double-click <strong>Y</strong>, type <kbd>0.12</kbd>, and press <kbd>Enter</kbd>. Blender will keep the cylinder round.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Double-click <strong>Z</strong>, type <kbd>0.10</kbd>, and press <kbd>Enter</kbd>.</li>
+    <li><span class="chip chip-check">Check</span> The numbers in the panel read 0.120, 0.120, and 0.100.</li>
+    <li><span class="chip">Key</span> Press <kbd>Cmd</kbd> + <kbd>S</kbd> to save as <code>plant-pot.blend</code>.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Check your work:</strong> if the object looks the wrong size in the view, read the numbers in the panel. The panel is the source of truth. Guessing by eye is the most common mistake.
+  </div>
+
+  <h2>Project: plant pot</h2>
+  <p>A cylinder 12 cm wide and 10 cm tall. Save as <code>plant-pot.blend</code>.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 200" role="img" aria-label="Finished plant pot shape">
+      <rect class="f-panel" x="6" y="6" width="628" height="188" rx="12"/>
+      <ellipse cx="320" cy="60" rx="90" ry="18" class="f-face-l"/>
+      <rect x="230" y="60" width="180" height="100" class="f-face-m"/>
+      <ellipse cx="320" cy="160" rx="90" ry="18" class="f-face-d"/>
+      <text x="320" y="186" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: 12 cm wide, 10 cm tall</text>
+    </svg>
+    <figcaption><strong>Finished product:</strong> a plain cylinder with exact size. The shape is simple on purpose.</figcaption>
+  </figure>
+
+  <div class="nav-row">
+    <a href="11-boolean-cable-box.html">← Lesson 11</a>
+    <a href="13-apple-subdivision.html">Next: Lesson 13 →</a>
+  </div>
+</main>
+</div>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>
