@@ -23,7 +23,7 @@
     <label><input type="checkbox" id="l1-view"> I can orbit, zoom, and pan with the Magic Mouse.</label>
     <label><input type="checkbox" id="l1-select"> I can select and deselect the cube.</label>
     <label><input type="checkbox" id="l1-save"> I saved <code>lesson01.blend</code>.</label>
-    <label><input type="checkbox" id="l1-project"> I have three cubes in the scene.</label>
+    <label><input type="checkbox" id="l1-project"> I have three cubes stacked in one column.</label>
   </div>
 </aside>
 <main>
@@ -62,44 +62,44 @@
   </div>
 
   <h2>Project: stacked "716" blocks</h2>
-  <p>You will end with three cubes stacked near each other. Placement does not need to be neat yet.</p>
+  <p>You will end with three cubes stacked in one column, one on top of the other. The default cube is 2 units tall, so each copy moves up exactly 2 units.</p>
 
   <figure class="fig wide">
     <span class="fig-label">Your finished scene (screenshot from a Mac)</span>
     <img src="../img/lesson1-finished.png" alt="Blender 5.2.1 with three cubes side by side, the right cube selected and outlined in orange, and the Outliner listing Camera, Cube, Cube.001, Cube.002, and Light">
-    <figcaption><strong>What to look at:</strong> three cubes in the 3D Viewport, with the right one outlined in orange (selected). The Outliner on the right lists Cube, Cube.001, and Cube.002. Your cubes can sit closer or farther apart than this.</figcaption>
+    <figcaption><strong>What to look at:</strong> this screenshot shows three cubes side by side, with the right one outlined in orange (selected). It is not the finished stack yet. Follow the stacking steps below to finish.</figcaption>
   </figure>
 
   <figure class="fig">
-    <svg viewBox="0 0 640 260" role="img" aria-label="Finished project: three stacked cubes">
+    <svg viewBox="0 0 640 260" role="img" aria-label="Finished project: three cubes stacked in one column">
       <rect class="f-panel" x="6" y="6" width="628" height="248" rx="12"/>
-      <!-- cube 1 bottom left -->
-      <g transform="translate(150,120)">
+      <g transform="translate(250,20)">
         <polygon points="0,40 60,40 60,100 0,100" class="f-face-m"/>
         <polygon points="0,40 22,20 82,20 60,40" class="f-face-l"/>
         <polygon points="60,40 82,20 82,80 60,100" class="f-face-d"/>
       </g>
-      <g transform="translate(250,120)">
+      <g transform="translate(250,100)">
         <polygon points="0,40 60,40 60,100 0,100" class="f-face-m"/>
         <polygon points="0,40 22,20 82,20 60,40" class="f-face-l"/>
         <polygon points="60,40 82,20 82,80 60,100" class="f-face-d"/>
       </g>
-      <g transform="translate(200,50)">
+      <g transform="translate(250,180)">
         <polygon points="0,40 60,40 60,100 0,100" class="f-face-m"/>
         <polygon points="0,40 22,20 82,20 60,40" class="f-face-l"/>
         <polygon points="60,40 82,20 82,80 60,100" class="f-face-d"/>
       </g>
-      <text x="320" y="236" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: three cubes in the viewport</text>
     </svg>
-    <figcaption><strong>Finished product:</strong> three cubes, close together. Don't worry about perfect alignment yet.</figcaption>
+    <figcaption><strong>Finished product:</strong> three cubes in one column, one on top of the other. The drawing is simplified: in Blender you will see the full 3D cubes.</figcaption>
   </figure>
 
   <ol class="steps">
-    <li><span class="chip chip-tool">Tool</span> Click the cube so it's selected.</li>
-    <li><span class="chip">Key</span> Press <kbd>Shift</kbd> + <kbd>D</kbd>. A copy appears and follows your mouse. Click once to place it. Press <kbd>Esc</kbd> instead if you want to cancel. (Blender's duplicate key is <kbd>Shift</kbd> + <kbd>D</kbd>. <span class="verify">unverified on your Mac</span>.)</li>
-    <li><span class="chip">Key</span> Repeat once more so you have three cubes.</li>
-    <li><span class="chip chip-check">Check</span> You see three cubes in the 3D Viewport.</li>
-    <li><span class="chip">Key</span> Save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
+    <li><span class="chip chip-tool">Tool</span> Click the cube so it's selected (orange outline).</li>
+    <li><span class="chip">Key</span> Press <kbd>Shift</kbd> + <kbd>D</kbd>, then press <kbd>Esc</kbd>. A copy appears in the same spot and stays there. <span class="verify">Shift+D and Esc behavior unverified on your Mac</span></li>
+    <li><span class="chip">Key</span> Press <kbd>G</kbd>, then <kbd>Z</kbd>, type <kbd>2</kbd>, and press <kbd>Enter</kbd>. The copy moves straight up exactly 2 units and sits on top of the original. <span class="verify">typed-number move unverified on your Mac</span></li>
+    <li><span class="chip chip-check">Check</span> Click the copy. In the Properties panel, the Object tab shows Location Z as 2 m.</li>
+    <li><span class="chip">Key</span> Press <kbd>Shift</kbd> + <kbd>D</kbd>, then <kbd>Esc</kbd> to make a third cube. Press <kbd>G</kbd>, <kbd>Z</kbd>, type <kbd>2</kbd>, and press <kbd>Enter</kbd>. This cube sits on top of the second.</li>
+    <li><span class="chip chip-check">Check</span> Press <kbd>1</kbd> for the front view. You should see three cubes stacked in one column, with no gap.</li>
+    <li><span class="chip">Key</span> Save with <kbd>Cmd</kbd> + <kbd>S</kbd> to <code>lesson01.blend</code>.</li>
   </ol>
 
   
