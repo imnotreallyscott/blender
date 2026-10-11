@@ -397,3 +397,10 @@ footer.site {
   h1 { font-size: 1.6rem; }
   .hero { padding: 22px 18px; }
 }
+
+/* ============ REAL MANUAL SCREENSHOTS ============ */
+figure.fig img { display: block; max-width: 100%; height: auto; border-radius: 10px; margin: 0 auto; background: #2a2d31; }
+figure.fig .pair { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { figure.fig .pair { grid-template-columns: 1fr 1fr; } }
+figure.fig .cap { font-size: .92rem; color: var(--muted); margin: 8px 0 0; }
+p.attrib { font-size: .8rem; color: var(--muted); margin: 12px 0 0; }
