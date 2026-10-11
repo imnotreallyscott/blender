@@ -21,7 +21,7 @@
   </div>
 
   <h2>Why this step exists</h2>
-  <p>Blender uses a middle mouse button to move around the 3D view. The Magic Mouse has no middle button. Blender has a setting that lets you do the same thing with Option + click. Turn it on once, and every lesson will work.</p>
+  <p>Blender uses a middle mouse button to move around the 3D view. The Magic Mouse has no middle button. Blender has a setting that lets you do the same thing with Option (or Command) + click. Turn it on once, and every lesson will work.</p>
 
   <figure class="fig">
     <svg viewBox="0 0 640 300" role="img" aria-label="Magic Mouse controls for Blender">
@@ -34,23 +34,23 @@
       <text class="f-text" x="320" y="40" text-anchor="middle" font-size="16" font-weight="700">Magic Mouse (top view)</text>
       <!-- labels -->
       <line class="f-stroke-m" x1="250" y1="170" x2="130" y2="170"/>
-      <text class="f-text" x="20" y="165" font-size="15" font-weight="700">Option + drag</text>
+      <text class="f-text" x="20" y="165" font-size="15" font-weight="700">Option (or Command) + drag</text>
       <text class="f-muted" x="20" y="186" font-size="13">= orbit (rotate the view)</text>
-      <line class="f-stroke-m" x1="390" y1="95" x2="520" y2="95"/>
-      <text class="f-text" x="526" y="90" font-size="15" font-weight="700">Swipe on surface</text>
-      <text class="f-muted" x="526" y="110" font-size="13">= scroll / zoom</text>
-      <line class="f-stroke-m" x1="390" y1="210" x2="520" y2="210"/>
-      <text class="f-text" x="526" y="205" font-size="15" font-weight="700">Shift + Option + drag</text>
-      <text class="f-muted" x="526" y="225" font-size="13">= pan (move the view sideways)</text>
+      <line class="f-stroke-m" x1="390" y1="95" x2="405" y2="95"/>
+      <text class="f-text" x="412" y="90" font-size="15" font-weight="700">Swipe on surface</text>
+      <text class="f-muted" x="412" y="110" font-size="13">= scroll / zoom</text>
+      <line class="f-stroke-m" x1="390" y1="210" x2="405" y2="210"/>
+      <text class="f-text" x="412" y="205" font-size="15" font-weight="700">Shift + modifier + drag</text>
+      <text class="f-muted" x="412" y="225" font-size="13">= pan (slide the view)</text>
     </svg>
-    <figcaption><strong>What you should see:</strong> after setup, dragging with Option held rotates the 3D view. Verify these three gestures on your Mac: <span class="verify">unverified</span> until you test them.</figcaption>
+    <figcaption><strong>What you should see:</strong> after setup, dragging with the modifier you chose (Option or Command) rotates the 3D view. The Blender manual confirms the Alt and OSKey choices; which key works on your Mac is <span class="verify">unverified until you test it</span>.</figcaption>
   </figure>
 
   <h2>Steps</h2>
   <ol class="steps">
     <li><span class="chip chip-menu">Menu</span> Open Blender. Click the <strong>Blender</strong> menu in the top-left of the screen, then choose <strong>Settings</strong>. <span class="verify">unverified label for 5.2</span> Some versions use <strong>Edit &gt; Preferences</strong> instead.</li>
     <li><span class="chip chip-menu">Menu</span> In the Settings window, open the <strong>Input</strong> section <span class="verify">unverified</span>.</li>
-    <li><span class="chip chip-mouse">Mouse</span> Turn on <strong>Emulate 3 Button Mouse</strong> <span class="verify">unverified name</span>. Leave the other options alone.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Turn on <strong>Emulate 3 Button Mouse</strong>. The Blender manual confirms this option exists and that it works with <strong>Alt + left click</strong> <span class="verify">manual, Blender 5.2 LTS</span>. Find the <strong>Modifier</strong> setting under it. Choose <strong>Alt</strong> to use the Option key on your Mac, or <strong>OSKey</strong> to use the Command key. <span class="verify">Mac key names unverified</span> Test both, then keep the one that works. Leave the other options alone.</li>
     <li><span class="chip">Key</span> Find <strong>Emulate Numpad</strong> <span class="verify">unverified name</span> in the same section and turn it on. This makes the top-row number keys (1, 2, 3, 7) change views and select modes, which later lessons use.</li>
     <li><span class="chip">Key</span> Close the Settings window. Blender saves preferences automatically <span class="verify">unverified</span>.</li>
     <li><span class="chip chip-check">Check</span> Press <kbd>Shift</kbd> + <kbd>A</kbd> in the 3D view. A menu should open. Press <kbd>Esc</kbd> to close it.</li>
@@ -80,7 +80,7 @@
     <label><input type="checkbox" id="s0-settings"> I found the Input section in Blender Settings.</label>
     <label><input type="checkbox" id="s0-mouse"> Emulate 3 Button Mouse is on.</label>
     <label><input type="checkbox" id="s0-numpad"> Emulate Numpad is on.</label>
-    <label><input type="checkbox" id="s0-orbit"> Option + drag rotates the view in Blender.</label>
+    <label><input type="checkbox" id="s0-orbit"> The modifier I chose (Option or Command) + drag rotates the view.</label>
   </div>
 
   <div class="nav-row">
