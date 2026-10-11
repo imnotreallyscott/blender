@@ -1,16 +1,16 @@
 /* ============ GREEN THEME ============ */
 :root {
-  --bg: #eef6ef;
-  --bg-2: #e2f0e4;
-  --card: #ffffff;
+  --bg: #dde8da;
+  --bg-2: #cfe0cb;
+  --card: #f7fbf6;
   --text: #13271a;
-  --muted: #4d6654;
-  --accent: #1d7a3b;
-  --accent-2: #36a85a;
+  --muted: #3f5a47;
+  --accent: #186b32;
+  --accent-2: #257a41;
   --lime: #b8e84f;
   --gold: #e7b92b;
-  --border: #c9e0cd;
-  --done: #1d7a3b;
+  --border: #b7cfb3;
+  --done: #186b32;
   --head-a: #0f4a26;
   --head-b: #2b9a4c;
   --shadow: 0 8px 22px rgba(16, 60, 30, .10);
@@ -305,9 +305,9 @@ figure.fig figcaption strong { color: var(--text); }
 .f-lime    { fill: var(--lime); }
 .f-gold    { fill: var(--gold); }
 .f-done    { fill: var(--done); }
-.f-x       { fill: #e0525a; }
-.f-y       { fill: #5bbf5b; }
-.f-z       { fill: #4a86e8; }
+.f-x       { fill: #c8414a; }
+.f-y       { fill: #2e8b3e; }
+.f-z       { fill: #2f6fd0; }
 .f-face-l  { fill: var(--fig-l); }
 .f-face-m  { fill: var(--fig-m); }
 .f-face-d  { fill: var(--fig-d); }
@@ -358,16 +358,17 @@ figure.fig figcaption strong { color: var(--text); }
   .lesson-grid { grid-template-columns: 1fr 1fr; }
 }
 .lesson-grid li {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  gap: 12px;
+  position: relative;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 14px 16px;
+  padding: 14px 16px 14px 74px;
   box-shadow: var(--shadow);
 }
 .lesson-grid .num {
+  position: absolute;
+  left: 14px;
+  top: 14px;
   width: 44px;
   height: 44px;
   border-radius: 12px;
