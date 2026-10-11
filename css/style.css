@@ -265,7 +265,7 @@ code {
   border: 1px dashed var(--muted);
   border-radius: 6px;
   padding: 0 6px;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 /* ============ FIGURES ============ */
