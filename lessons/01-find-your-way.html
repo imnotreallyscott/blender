@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1: Find your way around · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><a href="../index.html">Blender Basics · scottaferguson.org</a></header>
+<main>
+  <h1>Lesson 1: Find your way around</h1>
+  <p class="meta">About 12 minutes · Blender 5.2 LTS · Mac Mini</p>
+
+  <div class="card goal">
+    <strong>Goal:</strong> Move the camera around the default cube, select it, and save a file.
+  </div>
+
+  <h2>Before you start</h2>
+  <p>Open Blender. A default scene appears with a gray cube, a light, and a camera. Leave them alone for now. Blender's main area is called the <strong>3D Viewport</strong>. This is where you build.</p>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li><strong>Move the view.</strong> Hold the middle mouse button and drag. On a trackpad, use the two-finger drag shown in Blender's navigation settings (check your setting; trackpad options vary by setup and are <span class="unverified">unverified for 5.2 on your machine</span>).</li>
+    <li><strong>Zoom.</strong> Scroll, or pinch on a trackpad. Scrolling up or pinching in brings the cube closer.</li>
+    <li><strong>Pan.</strong> Hold <kbd>Shift</kbd> and drag with the middle button (or use the two-finger drag combined with <kbd>Shift</kbd>).</li>
+    <li><strong>Use the number keys for fixed views.</strong> Press <kbd>1</kbd> for front, <kbd>3</kbd> for side, <kbd>7</kbd> for top. On a Mac keyboard without a numeric keypad, these may need the Numpad emulation setting turned on. If the number keys do nothing, look for that setting in Preferences and treat it as <span class="unverified">unverified for your setup</span>.</li>
+    <li><strong>Select the cube.</strong> Left-click the cube. An orange outline means it is selected. Click empty space to deselect.</li>
+    <li><strong>Save your work.</strong> Press <kbd>Cmd</kbd> + <kbd>S</kbd>. Name the file <code>lesson01.blend</code> and save it to a folder you will remember.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Mac tip:</strong> Blender uses <kbd>Cmd</kbd> where Windows uses <kbd>Ctrl</kbd>. Undo is <kbd>Cmd</kbd> + <kbd>Z</kbd>. Undo is your safety net, so use it freely.
+  </div>
+
+  <h2>Project: stacked "716" cube block</h2>
+  <ol class="steps">
+    <li>Select the cube and press <kbd>Shift</kbd> + <kbd>D</kbd>, then right-click to drop the copy in place. Copies stay in the same spot until you move them. We will move them in Lesson 2.</li>
+    <li>Repeat once more so you have three cubes. Do not worry about neat placement yet.</li>
+    <li>Save again with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
+  </ol>
+
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l1-view"> I can rotate, zoom, and pan the view.</label>
+    <label><input type="checkbox" id="l1-select"> I can select and deselect the cube.</label>
+    <label><input type="checkbox" id="l1-save"> I saved <code>lesson01.blend</code>.</label>
+    <label><input type="checkbox" id="l1-project"> I have three cubes in the scene.</label>
+  </div>
+
+  <div class="nav-row">
+    <a href="../index.html">← All lessons</a>
+    <a href="02-move-rotate-scale.html">Next: Lesson 2 →</a>
+  </div>
+</main>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>

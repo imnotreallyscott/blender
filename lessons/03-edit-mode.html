@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 3: Edit mode and vertices · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><a href="../index.html">Blender Basics · scottaferguson.org</a></header>
+<main>
+  <h1>Lesson 3: Edit mode and vertices</h1>
+  <p class="meta">About 14 minutes · Blender 5.2 LTS · Mac Mini</p>
+
+  <div class="card goal">
+    <strong>Goal:</strong> Switch into Edit Mode, select vertices, and change a shape by moving its corners.
+  </div>
+
+  <h2>Object Mode vs Edit Mode</h2>
+  <p>Object Mode moves whole objects. Edit Mode lets you change the shape inside an object. Press <kbd>Tab</kbd> to switch between them. Press <kbd>Tab</kbd> again to go back.</p>
+
+  <h2>The three select modes</h2>
+  <ul>
+    <li><kbd>1</kbd> = Vertex (corner points)</li>
+    <li><kbd>2</kbd> = Edge (lines between corners)</li>
+    <li><kbd>3</kbd> = Face (flat surfaces)</li>
+  </ul>
+  <p>Use the number keys on the top row. If they change the view instead, your Numpad emulation setting is on (see Lesson 1). <span class="unverified">Confirm on your machine.</span></p>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li>Select the cube in Object Mode, then press <kbd>Tab</kbd> to enter Edit Mode. You should see small dots on its corners.</li>
+    <li>Press <kbd>1</kbd> for vertex select. Click one corner dot. It turns orange.</li>
+    <li>Press <kbd>G</kbd> and move it. Only that corner moves. Press <kbd>Esc</kbd> to cancel.</li>
+    <li>Press <kbd>A</kbd> to select everything. Press <kbd>A</kbd> again to deselect all. Use <kbd>Alt</kbd> + <kbd>A</kbd> to deselect as well (confirm this on your Mac).</li>
+    <li>Select the top four corners with a box: drag a rectangle around them with the left mouse button held. Press <kbd>S</kbd>, then <kbd>0.5</kbd> and <kbd>Enter</kbd> to shrink the top.</li>
+    <li>Press <kbd>Tab</kbd> to return to Object Mode.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Common trap:</strong> If nothing moves, you are probably in Object Mode. Check the mode dropdown at the top left of the 3D Viewport.
+  </div>
+
+  <h2>Project: tilted shield plate</h2>
+  <p>This is an original shield-shaped plate for later use. It is not a team logo. Start from a fresh cube.</p>
+  <ol class="steps">
+    <li>Add a new cube with <kbd>Shift</kbd> + <kbd>A</kbd>, then Mesh, then Cube. Press <kbd>Tab</kbd> to enter Edit Mode.</li>
+    <li>Press <kbd>3</kbd> for face select. Click the top face, then press <kbd>Delete</kbd> and choose Faces. You now have an open box.</li>
+    <li>Press <kbd>1</kbd> for vertex select. Select the bottom four corners and press <kbd>S</kbd>, <kbd>Z</kbd>, <kbd>0.1</kbd>, <kbd>Enter</kbd> to flatten them.</li>
+    <li>Select the bottom two corners on one side and press <kbd>G</kbd>, <kbd>Z</kbd>, move up slightly. This creates a shield slope. Repeat on the other side.</li>
+    <li>Press <kbd>Tab</kbd> to leave Edit Mode and save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
+  </ol>
+
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l3-tab"> I switch between Object Mode and Edit Mode with <kbd>Tab</kbd>.</label>
+    <label><input type="checkbox" id="l3-vertex"> I moved one vertex by itself.</label>
+    <label><input type="checkbox" id="l3-select"> I selected several vertices with a box.</label>
+    <label><input type="checkbox" id="l3-project"> My shield plate is saved, with a clear slope.</label>
+  </div>
+
+  <div class="nav-row">
+    <a href="02-move-rotate-scale.html">← Lesson 2</a>
+    <a href="04-extrude.html">Next: Lesson 4 →</a>
+  </div>
+</main>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>

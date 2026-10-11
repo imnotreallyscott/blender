@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 4: Extrude · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><a href="../index.html">Blender Basics · scottaferguson.org</a></header>
+<main>
+  <h1>Lesson 4: Extrude</h1>
+  <p class="meta">About 14 minutes · Blender 5.2 LTS · Mac Mini</p>
+
+  <div class="card goal">
+    <strong>Goal:</strong> Pull a flat face out into a solid shape using <kbd>E</kbd>, the extrude key.
+  </div>
+
+  <h2>What extrude does</h2>
+  <p>Extrude copies a selected face (or edge) and pulls the copy away from the surface, creating new side walls. It is the most-used modeling tool in Blender. Press <kbd>E</kbd> in Edit Mode, move the mouse, and click to confirm.</p>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li>Select the default cube and press <kbd>Tab</kbd> to enter Edit Mode.</li>
+    <li>Press <kbd>3</kbd> for face select. Click the top face so it turns orange.</li>
+    <li>Press <kbd>E</kbd>, move the mouse up, and click. The top is now a raised block.</li>
+    <li>Press <kbd>Cmd</kbd> + <kbd>Z</kbd> to undo. Press <kbd>I</kbd> to inset: a smaller face appears inside the first. Move the mouse and click.</li>
+    <li>Press <kbd>E</kbd> again to extrude the inset face. You now have a raised frame.</li>
+    <li>Press <kbd>Tab</kbd> to leave Edit Mode.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Repeat rule:</strong> Pressing <kbd>Shift</kbd> + <kbd>R</kbd> repeats your last action. It is a fast way to build stepped shapes.
+  </div>
+
+  <h2>Project: raised name tag</h2>
+  <p>This tag is original. You will use the blue and gold colors later, in Lesson 5.</p>
+  <ol class="steps">
+    <li>Add a cube, then press <kbd>S</kbd>, <kbd>X</kbd>, <kbd>2</kbd>, <kbd>Enter</kbd> to make it wider. Press <kbd>S</kbd>, <kbd>Y</kbd>, <kbd>0.5</kbd>, <kbd>Enter</kbd> to make it a flat plate.</li>
+    <li>Enter Edit Mode with <kbd>Tab</kbd>. Select the top face with <kbd>3</kbd> and click it.</li>
+    <li>Press <kbd>I</kbd>, move the mouse a little, and click to inset a border.</li>
+    <li>Press <kbd>E</kbd> and move the mouse up a little to raise the middle panel. Press <kbd>Tab</kbd> to exit Edit Mode.</li>
+    <li>Save with <kbd>Cmd</kbd> + <kbd>S</kbd> as <code>nametag.blend</code>.</li>
+  </ol>
+
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l4-extrude"> I used <kbd>E</kbd> to pull a face out.</label>
+    <label><input type="checkbox" id="l4-inset"> I used <kbd>I</kbd> to make an inset border.</label>
+    <label><input type="checkbox" id="l4-repeat"> I used <kbd>Shift</kbd> + <kbd>R</kbd> at least once.</label>
+    <label><input type="checkbox" id="l4-project"> My raised name tag is saved as <code>nametag.blend</code>.</label>
+  </div>
+
+  <div class="nav-row">
+    <a href="03-edit-mode.html">← Lesson 3</a>
+    <a href="05-bevel-and-smooth.html">Next: Lesson 5 →</a>
+  </div>
+</main>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>

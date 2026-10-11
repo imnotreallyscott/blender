@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 5: Bevel and smooth · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><a href="../index.html">Blender Basics · scottaferguson.org</a></header>
+<main>
+  <h1>Lesson 5: Bevel and smooth</h1>
+  <p class="meta">About 15 minutes · Blender 5.2 LTS · Mac Mini</p>
+
+  <div class="card goal">
+    <strong>Goal:</strong> Round the hard edges with Bevel, then smooth the whole model with a Subdivision Surface modifier.
+  </div>
+
+  <h2>Two tools that make models look finished</h2>
+  <ul>
+    <li><strong>Bevel</strong> (<kbd>Ctrl</kbd> + <kbd>B</kbd>, in Edit Mode): rounds an edge into a small slope.</li>
+    <li><strong>Subdivision Surface</strong> (a modifier): smooths the whole model. It does not change your original mesh. It only changes how it looks.</li>
+  </ul>
+
+  <div class="card tip">
+    <strong>Modifier panel:</strong> Select the object, then click the wrench icon in the Properties panel. Add modifiers from there. Panel names and icon positions can change between versions, so <span class="unverified">confirm the wrench icon location on your 5.2 install</span>.
+  </div>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li>Select a cube and press <kbd>Tab</kbd> for Edit Mode. Press <kbd>2</kbd> for edge select.</li>
+    <li>Click one edge. Press <kbd>Ctrl</kbd> + <kbd>B</kbd>, move the mouse slightly, and click. The edge is now rounded.</li>
+    <li>Press <kbd>Tab</kbd> to return to Object Mode.</li>
+    <li>Open the wrench (Modifier) panel. Add a <strong>Subdivision Surface</strong> modifier. Set Levels Viewport to 2.</li>
+    <li>Save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
+  </ol>
+
+  <h2>Project: rounded coaster</h2>
+  <p>A coaster is a flat cylinder with rounded edges. It is a good first finished model. The colors are your choice. Blue and gold are a suggestion, not a requirement.</p>
+  <ol class="steps">
+    <li>Add a cylinder with <kbd>Shift</kbd> + <kbd>A</kbd>, then Mesh, then Cylinder. In the Adjust Last Operation panel, set Vertices to 32 and Radius to 1.</li>
+    <li>Press <kbd>S</kbd>, <kbd>Z</kbd>, <kbd>0.15</kbd>, <kbd>Enter</kbd> to make it flat, like a coaster.</li>
+    <li>Enter Edit Mode with <kbd>Tab</kbd>. Press <kbd>2</kbd>, then <kbd>A</kbd> to select everything, and press <kbd>Ctrl</kbd> + <kbd>B</kbd>. Move slightly and click to round the edges.</li>
+    <li>Press <kbd>Tab</kbd>. Add a Subdivision Surface modifier and set Levels Viewport to 2.</li>
+    <li>Save as <code>coaster.blend</code>.</li>
+  </ol>
+
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l5-bevel"> I rounded an edge with <kbd>Ctrl</kbd> + <kbd>B</kbd>.</label>
+    <label><input type="checkbox" id="l5-subd"> I added a Subdivision Surface modifier.</label>
+    <label><input type="checkbox" id="l5-coaster"> My rounded coaster is saved as <code>coaster.blend</code>.</label>
+    <label><input type="checkbox" id="l5-five"> I finished all five lessons. Good work.</label>
+  </div>
+
+  <div class="nav-row">
+    <a href="04-extrude.html">← Lesson 4</a>
+    <a href="../index.html">Back to all lessons</a>
+  </div>
+</main>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>

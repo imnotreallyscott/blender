@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 2: Move, rotate, scale · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site"><a href="../index.html">Blender Basics · scottaferguson.org</a></header>
+<main>
+  <h1>Lesson 2: Move, rotate, scale</h1>
+  <p class="meta">About 12 minutes · Blender 5.2 LTS · Mac Mini</p>
+
+  <div class="card goal">
+    <strong>Goal:</strong> Use the three basic transform keys to place, turn, and size objects.
+  </div>
+
+  <h2>The three keys</h2>
+  <ul>
+    <li><kbd>G</kbd> = Grab (move)</li>
+    <li><kbd>R</kbd> = Rotate</li>
+    <li><kbd>S</kbd> = Scale</li>
+  </ul>
+  <p>Select an object, press the key, move the mouse, and click to confirm. Press <kbd>Esc</kbd> to cancel.</p>
+
+  <h2>Lock to one direction</h2>
+  <p>After pressing <kbd>G</kbd>, <kbd>R</kbd>, or <kbd>S</kbd>, press <kbd>X</kbd>, <kbd>Y</kbd>, or <kbd>Z</kbd> to lock the change to one axis. Press the same letter again to switch to the object's own axis. This is the most useful habit in Blender.</p>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li>Select one cube. Press <kbd>G</kbd>, then <kbd>Z</kbd>, move the mouse up, and click. The cube rises.</li>
+    <li>Press <kbd>Cmd</kbd> + <kbd>Z</kbd> to undo. Repeat with <kbd>G</kbd> then <kbd>X</kbd>.</li>
+    <li>Press <kbd>R</kbd>, then <kbd>Z</kbd>, and move the mouse. Watch the cube turn. Hold <kbd>Ctrl</kbd> while rotating to snap to set angles (check that this works on your Mac; <span class="unverified">unverified on your trackpad</span>).</li>
+    <li>Press <kbd>S</kbd> and move the mouse to make the cube bigger or smaller. Press <kbd>S</kbd>, then <kbd>X</kbd>, to stretch it only along X.</li>
+    <li>Look at the <strong>N panel</strong>. Press <kbd>N</kbd> with the mouse in the 3D Viewport. It shows exact Location, Rotation, and Scale numbers. Type a number to set a value precisely.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Why this matters:</strong> Blender measures in units, and the N panel shows the numbers. If something looks off, check the numbers before you guess.
+  </div>
+
+  <h2>Project: three-block bison-shaped stand</h2>
+  <p>This is a simple stand with a wide base and a shorter stacked top. It is not a bison yet. It is a shape, and it teaches the three tools.</p>
+  <ol class="steps">
+    <li>Use the cube you have. Press <kbd>S</kbd>, then <kbd>X</kbd>, and stretch it into a wide, flat base.</li>
+    <li>Duplicate one cube with <kbd>Shift</kbd> + <kbd>D</kbd>, right-click to drop it, then press <kbd>S</kbd> to make it smaller. This is the body.</li>
+    <li>Duplicate once more for the head. Scale it to a small block, then use <kbd>G</kbd>, <kbd>Z</kbd> to lift it above the body.</li>
+    <li>Use <kbd>G</kbd> with <kbd>X</kbd> or <kbd>Y</kbd> to line up the parts. Save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
+  </ol>
+
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l2-move"> I moved an object along one axis using <kbd>G</kbd> and an axis key.</label>
+    <label><input type="checkbox" id="l2-rotate"> I rotated an object using <kbd>R</kbd>.</label>
+    <label><input type="checkbox" id="l2-scale"> I stretched an object along one axis using <kbd>S</kbd>.</label>
+    <label><input type="checkbox" id="l2-n"> I opened the N panel and typed an exact number.</label>
+    <label><input type="checkbox" id="l2-project"> My three-block stand is saved.</label>
+  </div>
+
+  <div class="nav-row">
+    <a href="01-find-your-way.html">← Lesson 1</a>
+    <a href="03-edit-mode.html">Next: Lesson 3 →</a>
+  </div>
+</main>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>
