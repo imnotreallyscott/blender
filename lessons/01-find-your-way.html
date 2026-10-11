@@ -14,62 +14,24 @@
 </header>
 <main>
   <h1>Lesson 1: Find your way around</h1>
-  <p class="meta">About 12 minutes · Blender 5.2 LTS · Mac Mini + Magic Mouse · needs the <a href="00-mac-setup.html">Mac setup</a> done first</p>
+  <p class="meta">About 12 minutes · Blender 5.2.1 LTS · Mac Mini + Magic Mouse · needs the <a href="00-mac-setup.html">Mac setup</a> done first</p>
 
   <div class="card goal">
     <strong>Goal:</strong> Move the view, select the cube, and save a file.
   </div>
 
   <h2>What you should see</h2>
-  <p>Open Blender. You'll see a gray cube, a light, and a camera. Leave them alone for now. The big center area is the <strong>3D Viewport</strong>. This is where you build.</p>
+  <p>Open Blender. Your screen should look like the screenshot below: a gray cube, a light, and a camera. The big center area is the <strong>3D Viewport</strong>. This is where you build. In the screenshot, the cube already has an orange outline, which means it is selected. That is why the Properties panel shows <em>Cube</em>.</p>
 
   <figure class="fig">
-    <svg viewBox="0 0 640 360" role="img" aria-label="Drawing of the Blender screen: menu bar, tool sidebar, 3D viewport, properties panel, timeline">
-      <!-- fixed colors so this drawing looks the same in light and dark mode -->
-      <rect x="6" y="6" width="628" height="348" rx="12" fill="#2a2d31"/>
-      <!-- menu bar -->
-      <rect x="14" y="14" width="612" height="28" rx="6" fill="#1b1d20"/>
-      <text x="26" y="33" font-size="13" fill="#e9ecef" font-weight="700" font-family="system-ui, sans-serif">File   Edit   Render   Window   Help</text>
-      <!-- tool sidebar -->
-      <rect x="14" y="50" width="40" height="290" rx="6" fill="#383c42"/>
-      <rect x="20" y="60" width="28" height="28" rx="6" fill="#f2c94c"/>
-      <rect x="20" y="96" width="28" height="28" rx="6" fill="#5b6168"/>
-      <rect x="20" y="132" width="28" height="28" rx="6" fill="#5b6168"/>
-      <!-- 3D viewport -->
-      <rect x="62" y="50" width="400" height="260" rx="6" fill="#3a3e44"/>
-      <text x="74" y="72" font-size="13" fill="#c9ced6" font-family="system-ui, sans-serif">3D Viewport</text>
-      <polygon points="200,150 270,150 270,220 200,220" fill="#5ed687"/>
-      <polygon points="200,150 230,122 300,122 270,150" fill="#a9efc0"/>
-      <polygon points="270,150 300,122 300,192 270,220" fill="#2f9e5b"/>
-      <!-- axis gizmo -->
-      <circle cx="420" cy="92" r="22" fill="#2a2d31"/>
-      <line x1="420" y1="92" x2="440" y2="92" stroke="#e0525a" stroke-width="3"/>
-      <line x1="420" y1="92" x2="420" y2="72" stroke="#5bbf5b" stroke-width="3"/>
-      <line x1="420" y1="92" x2="408" y2="106" stroke="#4a86e8" stroke-width="3"/>
-      <!-- properties -->
-      <rect x="470" y="50" width="164" height="260" rx="6" fill="#383c42"/>
-      <text x="482" y="78" font-size="13" fill="#e9ecef" font-weight="700" font-family="system-ui, sans-serif">Properties</text>
-      <rect x="482" y="92" width="140" height="22" rx="4" fill="#4a4f57"/>
-      <rect x="482" y="124" width="140" height="22" rx="4" fill="#4a4f57"/>
-      <rect x="482" y="156" width="140" height="22" rx="4" fill="#4a4f57"/>
-      <text x="482" y="236" font-size="12" fill="#c9ced6" font-family="system-ui, sans-serif">Object settings</text>
-      <!-- timeline -->
-      <rect x="14" y="318" width="612" height="30" rx="6" fill="#383c42"/>
-      <text x="26" y="338" font-size="13" fill="#c9ced6" font-family="system-ui, sans-serif">Timeline (you can ignore this for now)</text>
-      <!-- numbered callouts (placed clear of other parts) -->
-      <g font-family="system-ui, sans-serif" font-weight="800" font-size="13" text-anchor="middle">
-        <circle cx="600" cy="28" r="12" fill="#c8f263"/><text x="600" y="33" fill="#0f3b1e">1</text>
-        <circle cx="34" cy="312" r="12" fill="#c8f263"/><text x="34" y="317" fill="#0f3b1e">2</text>
-        <circle cx="456" cy="62" r="12" fill="#c8f263"/><text x="456" y="67" fill="#0f3b1e">3</text>
-        <circle cx="612" cy="64" r="12" fill="#c8f263"/><text x="612" y="69" fill="#0f3b1e">4</text>
-        <circle cx="612" cy="336" r="12" fill="#c8f263"/><text x="612" y="341" fill="#0f3b1e">5</text>
-      </g>
-    </svg>
+    <span class="fig-label">Screenshot: Blender 5.2.1 LTS on a Mac</span>
+    <div class="shot">
+      <img src="../img/screenshot-blender-5.2.1-default-scene.png" alt="Blender 5.2.1 LTS default scene with a selected gray cube, camera, and light">
+      <svg viewBox="0 0 1714 1319" aria-hidden="true"><circle cx="250" cy="45" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="250" y="54" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">1</text><circle cx="38" cy="500" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="38" y="509" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">2</text><circle cx="620" cy="300" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="620" y="309" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">3</text><circle cx="150" cy="100" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="150" y="109" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">4</text><circle cx="1560" cy="230" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="1560" y="239" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">5</text><circle cx="1560" cy="1000" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="1560" y="1009" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">6</text><circle cx="560" cy="1276" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="560" y="1285" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">7</text><circle cx="800" cy="1308" r="26" fill="#c8f263" stroke="#0f3b1e" stroke-width="3"/><text x="800" y="1317" text-anchor="middle" font-size="30" font-weight="800" font-family="system-ui, sans-serif" fill="#0f3b1e">8</text></svg>
+    </div>
     <figcaption>
-      <span class="fig-label">Drawing, not a screenshot</span><br>
-      <strong>What this shows:</strong> where Blender's main parts sit.<br>
-      <strong>1</strong> Menu bar (File, Edit, and so on) &nbsp; <strong>2</strong> Tool sidebar (left) &nbsp; <strong>3</strong> 3D Viewport (where you build) &nbsp; <strong>4</strong> Properties (settings for the selected object) &nbsp; <strong>5</strong> Timeline (animation, ignore for now).<br>
-      Your exact layout may differ slightly in 5.2 <span class="verify">unverified</span>.
+      <strong>Parts of the screen:</strong><br>
+      <strong>1</strong> Menu bar &nbsp; <strong>2</strong> Tool sidebar &nbsp; <strong>3</strong> 3D Viewport (where you build) &nbsp; <strong>4</strong> Mode menu (reads Object Mode) &nbsp; <strong>5</strong> Outliner (everything in the scene) &nbsp; <strong>6</strong> Properties panel (settings for the selected object) &nbsp; <strong>7</strong> Timeline (ignore for now) &nbsp; <strong>8</strong> Status bar (mouse hints).
     </figcaption>
   </figure>
 
@@ -79,7 +41,7 @@
     <li><span class="chip chip-mouse">Mouse</span> <strong>Zoom.</strong> Swipe on the Magic Mouse surface. Swipe toward you to zoom out.</li>
     <li><span class="chip chip-mouse">Mouse</span> <strong>Pan.</strong> Hold <kbd>Shift</kbd> + <kbd>Option</kbd> and drag. The view slides sideways.</li>
     <li><span class="chip">Key</span> <strong>Fixed views.</strong> Press <kbd>1</kbd> for front, <kbd>3</kbd> for side, <kbd>7</kbd> for top. If nothing changes, the Numpad setting is off. Go back to the Mac setup page.</li>
-    <li><span class="chip chip-tool">Tool</span> <strong>Select the cube.</strong> Click the cube with the left mouse button. It gets an orange outline. Click empty space to deselect.</li>
+    <li><span class="chip chip-tool">Tool</span> <strong>Select the cube.</strong> Click the cube with the left mouse button. It gets an orange outline (it may already be selected, as in the screenshot). Click empty space to deselect.</li>
     <li><span class="chip">Key</span> <strong>Save.</strong> Press <kbd>Cmd</kbd> + <kbd>S</kbd>. Name the file <code>lesson01.blend</code> and save it in a folder you will remember.</li>
   </ol>
 
