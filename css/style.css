@@ -459,3 +459,8 @@ figure.fig .shot img { cursor: zoom-in; }
 .lesson-grid .prog { margin: 4px 0 0; font-size: .85rem; font-weight: 700; color: var(--muted); }
 .lesson-grid .prog.is-complete { color: var(--accent); }
 .unit-progress { font-weight: 700; color: var(--accent); }
+
+/* Wide screenshot: in the two-column layout, keep it inside the lesson column */
+@media (min-width: 1180px) {
+  figure.fig.wide { width: 100%; left: auto; transform: none; position: relative; }
+}
