@@ -409,3 +409,12 @@ p.attrib { font-size: .8rem; color: var(--muted); margin: 12px 0 0; }
 figure.fig .shot { position: relative; }
 figure.fig .shot img { display: block; width: 100%; height: auto; border-radius: 10px; }
 figure.fig .shot svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+/* ============ WIDE FIGURE (screenshots that need room) ============ */
+figure.fig.wide {
+  width: min(1100px, 94vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+figure.fig .shot img { cursor: zoom-in; }
