@@ -454,3 +454,8 @@ figure.fig .shot img { cursor: zoom-in; }
 .layout, .layout > main, .objectives { min-width: 0; box-sizing: border-box; }
 .layout { width: 100%; }
 .objectives { overflow-wrap: anywhere; }
+
+/* ============ UNIT PAGES: progress counts ============ */
+.lesson-grid .prog { margin: 4px 0 0; font-size: .85rem; font-weight: 700; color: var(--muted); }
+.lesson-grid .prog.is-complete { color: var(--accent); }
+.unit-progress { font-weight: 700; color: var(--accent); }
