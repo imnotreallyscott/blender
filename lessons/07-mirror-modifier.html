@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 7: Mirror modifier · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css?v=4">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
+<div class="layout">
+<aside class="objectives" aria-label="Lesson objectives">
+  <p class="obj-label">Lesson objectives</p>
+  <div class="card goal">
+    <strong>Goal:</strong> Model one half of a shape and let Blender build the other half.
+  </div>
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l7-delete"> I deleted one side of a cube.</label>
+    <label><input type="checkbox" id="l7-add"> I added a Mirror modifier.</label>
+    <label><input type="checkbox" id="l7-follow"> I changed one side and the other side followed.</label>
+    <label><input type="checkbox" id="l7-save"> My mirror block is saved.</label>
+  </div>
+</aside>
+<main>
+  <h1>Lesson 7: Mirror modifier</h1>
+  <p class="meta">About 14 minutes · Blender 5.2.1 LTS · Mac Mini + Magic Mouse</p>
+
+  <h2>What Mirror does</h2>
+  <p>Most real objects are symmetric, like a mug, a helmet, or a logo shape. The Mirror modifier copies your geometry across an axis, so you only model one half. A <strong>modifier</strong> is a setting that changes the object without changing the original mesh. You can turn it off or change it at any time.</p>
+
+  <figure class="fig">
+    <span class="fig-label">Real screenshot from the Blender manual</span>
+    <img src="../img/manual/modeling_modifiers_generate_mirror_panel.png" alt="Mirror modifier panel with the X axis button highlighted in blue">
+    <figcaption><strong>What to look at:</strong> the <strong>Axis</strong> row. X is highlighted in blue, which means the copy is made across the X axis. That is the default you will use in this lesson.</figcaption>
+    <p class="attrib">Image: <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/mirror.html">Blender Manual</a> by the Blender Documentation Team, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Shared unchanged.</p>
+  </figure>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li><span class="chip chip-tool">Tool</span> Add a cube: press <kbd>Shift</kbd> + <kbd>A</kbd>, then <strong>Mesh &gt; Cube</strong>. <span class="verify">menu path unverified in 5.2.1</span></li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode, then <kbd>1</kbd> for vertex select.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Rotate the view with <kbd>Cmd</kbd> + drag until the <strong>left side</strong> of the cube faces you. Hold the left mouse button on empty space and drag a box around the four corners on that side. Release.</li>
+    <li><span class="chip">Key</span> Press <kbd>X</kbd> and choose <strong>Vertices</strong>. The left side is gone. <span class="verify">the delete menu label is unverified in 5.2.1</span></li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> to return to Object Mode.</li>
+    <li><span class="chip chip-menu">Menu</span> In the <strong>Properties</strong> panel, click the blue <strong>wrench</strong> tab (Modifiers). Click <strong>Add Modifier</strong>, then <strong>Generate &gt; Mirror</strong>. The button is at the top of the Modifiers tab, per the manual.</li>
+    <li><span class="chip chip-check">Check</span> A full cube appears again, with both sides matching. The <strong>Axis X</strong> button is blue.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode. Click a corner on the <strong>right</strong> side, press <kbd>G</kbd>, and move it. Click to confirm.</li>
+    <li><span class="chip chip-check">Check</span> The left side moved too. Blender copied your change across the middle.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Why the cube looks cut in half at first:</strong> the mirror copies only the geometry that exists. Your remaining half is copied to the other side. The Merge setting joins the seam in the middle.
+  </div>
+
+  <h2>Project: mirror block</h2>
+  <p>A symmetric block made from one half. Start from a new cube, delete one side, and mirror it. Save as <code>mirror-block.blend</code>.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 220" role="img" aria-label="Finished mirror block with two matching halves">
+      <rect class="f-panel" x="6" y="6" width="628" height="208" rx="12"/>
+      <polygon points="180,60 320,60 320,170 180,170" class="f-face-m"/>
+      <polygon points="180,60 200,40 340,40 320,60" class="f-face-l"/>
+      <polygon points="320,60 340,40 340,150 320,170" class="f-face-d"/>
+      <polygon points="320,60 460,60 460,170 320,170" class="f-face-m" opacity=".85"/>
+      <polygon points="320,60 340,40 480,40 460,60" class="f-face-l"/>
+      <polygon points="460,60 480,40 480,150 460,170" class="f-face-d"/>
+      <line x1="320" y1="34" x2="320" y2="184" class="f-stroke-m"/>
+      <text x="320" y="204" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: two matching halves, one mirror line</text>
+    </svg>
+    <figcaption><strong>Finished product:</strong> the dashed line is the mirror plane. Both sides match because the modifier copied one side.</figcaption>
+  </figure>
+
+  <div class="nav-row">
+    <a href="06-render-a-still.html">← Lesson 6</a>
+    <a href="08-array-modifier.html">Next: Lesson 8 →</a>
+  </div>
+</main>
+</div>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>

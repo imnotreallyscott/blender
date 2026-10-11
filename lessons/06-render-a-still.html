@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 6: Render a still image · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css?v=4">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
+<div class="layout">
+<aside class="objectives" aria-label="Lesson objectives">
+  <p class="obj-label">Lesson objectives</p>
+  <div class="card goal">
+    <strong>Goal:</strong> Turn your 3D scene into a picture you can save and share.
+  </div>
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l6-camera"> I looked through the camera.</label>
+    <label><input type="checkbox" id="l6-engine"> I chose EEVEE as the render engine.</label>
+    <label><input type="checkbox" id="l6-render"> I rendered an image.</label>
+    <label><input type="checkbox" id="l6-save"> I saved the image as a PNG.</label>
+  </div>
+</aside>
+<main>
+  <h1>Lesson 6: Render a still image</h1>
+  <p class="meta">About 12 minutes · Blender 5.2.1 LTS · Mac Mini + Magic Mouse</p>
+
+  <h2>What rendering does</h2>
+  <p>A render takes the view from a camera, adds light, and makes a finished picture. The 3D view you have been working in is a workspace. A render is the result you can share.</p>
+
+  <figure class="fig">
+    <span class="fig-label">Real screenshot from the Blender manual</span>
+    <img src="../img/manual/editors_3dview_viewport-render_example-eevee-render.jpg" alt="A finished EEVEE render of a colorful scene with a robot, ice cream, and candy">
+    <figcaption><strong>Finished look:</strong> this is the manual's example, a complex scene. Your first render will be simpler. That is normal.</figcaption>
+    <p class="attrib">Image: <a href="https://docs.blender.org/manual/en/latest/render/eevee/index.html">Blender Manual</a> by the Blender Documentation Team, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Shared unchanged.</p>
+  </figure>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li><span class="chip chip-tool">Tool</span> Open your block stand file from Lesson 2. If you don't have it, use any simple object.</li>
+    <li><span class="chip">Key</span> Press <kbd>0</kbd> (top row, with Emulate Numpad on from Lesson 0) to look through the camera. <span class="verify">unverified on your Mac</span> The view should show your objects. If not, use the camera tools in the 3D View later.</li>
+    <li><span class="chip chip-menu">Menu</span> In the <strong>Properties</strong> panel, click the <strong>Render</strong> tab. <span class="verify">unverified icon position for 5.2.1</span></li>
+    <li><span class="chip chip-menu">Menu</span> Find <strong>Render Engine</strong> and choose <strong>EEVEE</strong>. EEVEE is the fast option for a Mac Mini. <span class="verify">unverified default on 5.2.1</span></li>
+    <li><span class="chip chip-menu">Menu</span> In the top bar, choose <strong>Render &gt; Render Image</strong>. A new window opens and fills in. <span class="verify">unverified menu name</span></li>
+    <li><span class="chip chip-check">Check</span> The picture shows your objects with light and shadow.</li>
+    <li><span class="chip chip-menu">Menu</span> In the render window, choose <strong>Image &gt; Save As</strong>. Pick <strong>PNG</strong>, name it <code>stand-render.png</code>, and save it. <span class="verify">unverified menu name</span></li>
+  </ol>
+
+  <div class="card tip">
+    <strong>If the render looks dark or empty:</strong> the camera may be pointed at nothing. Move your objects into the middle of the view, then render again.
+  </div>
+
+  <h2>Project: your first render</h2>
+  <p>Render your block stand and save it as a PNG. Keep the file. You will render it again after Lesson 9, so you can see the difference color makes.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 200" role="img" aria-label="Your first render, saved as stand-render.png">
+      <rect class="f-panel" x="6" y="6" width="628" height="188" rx="12"/>
+      <rect x="170" y="130" width="300" height="30" rx="6" class="f-face-m"/>
+      <rect x="250" y="80" width="140" height="50" rx="6" class="f-face-l"/>
+      <rect x="282" y="36" width="76" height="44" rx="6" class="f-face-d"/>
+      <text x="320" y="186" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: one saved PNG of your stand</text>
+    </svg>
+    <figcaption><strong>Finished product:</strong> a PNG file named <code>stand-render.png</code>. The image is the picture; the 3D file is still saved separately.</figcaption>
+  </figure>
+
+  <div class="nav-row">
+    <a href="05-bevel-and-smooth.html">← Lesson 5</a>
+    <a href="07-mirror-modifier.html">Next: Lesson 7 →</a>
+  </div>
+</main>
+</div>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>

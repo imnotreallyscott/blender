@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 9: Materials and color · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css?v=4">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
+<div class="layout">
+<aside class="objectives" aria-label="Lesson objectives">
+  <p class="obj-label">Lesson objectives</p>
+  <div class="card goal">
+    <strong>Goal:</strong> Give objects color with materials, then render again to see the change.
+  </div>
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l9-tab"> I opened the Material tab.</label>
+    <label><input type="checkbox" id="l9-new"> I made a new material.</label>
+    <label><input type="checkbox" id="l9-color"> I changed a base color.</label>
+    <label><input type="checkbox" id="l9-render"> I rendered the painted stand and saved it.</label>
+  </div>
+</aside>
+<main>
+  <h1>Lesson 9: Materials and color</h1>
+  <p class="meta">About 14 minutes · Blender 5.2.1 LTS · Mac Mini + Magic Mouse</p>
+
+  <h2>What a material does</h2>
+  <p>A material controls how a surface looks: its color, shininess, and how light passes through it. Each object can have a material. Materials show up in renders. Your Lesson 6 render will look different once you add them.</p>
+
+  <figure class="fig">
+    <span class="fig-label">Real screenshot from the Blender manual</span>
+    <img src="../img/manual/render_materials_assignment_panel-object-mode.png" alt="Material panel in Object Mode with one material slot named Material and the material name field below it">
+    <figcaption><strong>What to look at:</strong> the list at the top is the object's material slots. The row below it shows the material's name and a small sphere preview. Click the name to rename a material.</figcaption>
+    <p class="attrib">Image: <a href="https://docs.blender.org/manual/en/latest/render/materials/assignment.html">Blender Manual</a> by the Blender Documentation Team, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Shared unchanged.</p>
+  </figure>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li><span class="chip chip-tool">Tool</span> Open the stand file from Lesson 2. Click the base block to select it.</li>
+    <li><span class="chip chip-menu">Menu</span> In the <strong>Properties</strong> panel, click the <strong>Material</strong> tab. It is the sphere icon, last in the tab column. <span class="verify">icon position unverified on 5.2.1</span></li>
+    <li><span class="chip chip-menu">Menu</span> Click <strong>New</strong>. A material named <em>Material</em> appears in the slot. <span class="verify">unverified label on 5.2.1</span></li>
+    <li><span class="chip chip-mouse">Mouse</span> Double-click the name and type <kbd>Base Green</kbd>, then press <kbd>Enter</kbd>.</li>
+    <li><span class="chip chip-menu">Menu</span> Under <strong>Surface</strong>, click the color box next to <strong>Base Color</strong>. Pick a color in the window that opens. <span class="verify">Surface panel and label unverified on 5.2.1</span></li>
+    <li><span class="chip chip-check">Check</span> The base block changes color in the 3D view.</li>
+    <li><span class="chip">Key</span> Click the <strong>body</strong> block, then repeat steps 2 to 5 with a new material and a different color. Do the same for the <strong>head</strong> block.</li>
+    <li><span class="chip chip-menu">Menu</span> Choose <strong>Render &gt; Render Image</strong> again, the same way as Lesson 6. Save it as <code>stand-painted.png</code>.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>Why each block has its own material:</strong> in Lesson 2, the base, body, and head are three separate objects. Each object takes one material, so this is the easiest way to paint them now. Painting different parts of a single object is a later lesson.
+  </div>
+
+  <h2>Project: painted block stand</h2>
+  <p>Your Lesson 2 block stand with three colors. Save the render as <code>stand-painted.png</code> and compare it with <code>stand-render.png</code> from Lesson 6.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 200" role="img" aria-label="Finished block stand with three different colors">
+      <rect class="f-panel" x="6" y="6" width="628" height="188" rx="12"/>
+      <rect x="170" y="130" width="300" height="30" rx="6" fill="#4aa96e"/>
+      <rect x="250" y="80" width="140" height="50" rx="6" fill="#b8e84f"/>
+      <rect x="282" y="36" width="76" height="44" rx="6" fill="#e7b92b"/>
+      <text x="320" y="186" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: green base, lime body, gold head</text>
+    </svg>
+    <figcaption><strong>Finished product:</strong> three colors on three objects. Your colors can be anything.</figcaption>
+  </figure>
+
+  <div class="nav-row">
+    <a href="08-array-modifier.html">← Lesson 8</a>
+    <a href="../units/03-build.html">Back to Unit 3 →</a>
+  </div>
+</main>
+</div>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>
