@@ -12,13 +12,25 @@
   <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
   <button id="theme-toggle" type="button">Switch to dark mode</button>
 </header>
+<div class="layout">
+<aside class="objectives" aria-label="Lesson objectives">
+  <p class="obj-label">Lesson objectives</p>
+  <div class="card goal">
+    <strong>Goal:</strong> Move the view, select the cube, and save a file.
+  </div>
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="l1-view"> I can orbit, zoom, and pan with the Magic Mouse.</label>
+    <label><input type="checkbox" id="l1-select"> I can select and deselect the cube.</label>
+    <label><input type="checkbox" id="l1-save"> I saved <code>lesson01.blend</code>.</label>
+    <label><input type="checkbox" id="l1-project"> I have three cubes in the scene.</label>
+  </div>
+</aside>
 <main>
   <h1>Lesson 1: Find your way around</h1>
   <p class="meta">About 12 minutes · Blender 5.2.1 LTS · Mac Mini + Magic Mouse · needs the <a href="00-mac-setup.html">Mac setup</a> done first</p>
 
-  <div class="card goal">
-    <strong>Goal:</strong> Move the view, select the cube, and save a file.
-  </div>
+  
 
   <h2>What you should see</h2>
   <p>Open Blender. Your screen should look like the screenshot below: a gray cube, a light, and a camera. The big center area is the <strong>3D Viewport</strong>. This is where you build. In the screenshot, the cube already has an orange outline, which means it is selected. That is why the Properties panel shows <em>Cube</em>.</p>
@@ -84,19 +96,14 @@
     <li><span class="chip">Key</span> Save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
   </ol>
 
-  <div class="card checkpoint done-check">
-    <strong>You are done when:</strong>
-    <label><input type="checkbox" id="l1-view"> I can orbit, zoom, and pan with the Magic Mouse.</label>
-    <label><input type="checkbox" id="l1-select"> I can select and deselect the cube.</label>
-    <label><input type="checkbox" id="l1-save"> I saved <code>lesson01.blend</code>.</label>
-    <label><input type="checkbox" id="l1-project"> I have three cubes in the scene.</label>
-  </div>
+  
 
   <div class="nav-row">
     <a href="00-mac-setup.html">← Mac setup</a>
     <a href="02-move-rotate-scale.html">Next: Lesson 2 →</a>
   </div>
 </main>
+</div>
 <footer class="site">Lessons are original.</footer>
 <script src="../js/progress.js"></script>
 </body>

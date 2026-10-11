@@ -12,13 +12,25 @@
   <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
   <button id="theme-toggle" type="button">Switch to dark mode</button>
 </header>
+<div class="layout">
+<aside class="objectives" aria-label="Lesson objectives">
+  <p class="obj-label">Lesson objectives</p>
+  <div class="card goal">
+    <strong>Goal:</strong> Make the Magic Mouse work for Blender's 3D view, and turn on the number-key setting.
+  </div>
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="s0-settings"> I found the Input section in Blender Settings.</label>
+    <label><input type="checkbox" id="s0-mouse"> Emulate 3 Button Mouse is on.</label>
+    <label><input type="checkbox" id="s0-numpad"> Emulate Numpad is on.</label>
+    <label><input type="checkbox" id="s0-orbit"> Command + drag rotates the view.</label>
+  </div>
+</aside>
 <main>
   <h1>Mac setup: Magic Mouse and Blender settings</h1>
   <p class="meta">About 10 minutes · do this once · Mac Mini + Magic Mouse</p>
 
-  <div class="card goal">
-    <strong>Goal:</strong> Make the Magic Mouse work for Blender's 3D view, and turn on the number-key setting.
-  </div>
+  
 
   <h2>Why this step exists</h2>
   <p>Blender uses a middle mouse button to move around the 3D view. The Magic Mouse has no middle button. Blender has a setting that lets you do the same thing with Command + click. Turn it on once, and every lesson will work.</p>
@@ -75,19 +87,14 @@
     <figcaption><strong>Finished:</strong> both boxes are checked. The exact names may differ slightly on your version.</figcaption>
   </figure>
 
-  <div class="card checkpoint done-check">
-    <strong>You are done when:</strong>
-    <label><input type="checkbox" id="s0-settings"> I found the Input section in Blender Settings.</label>
-    <label><input type="checkbox" id="s0-mouse"> Emulate 3 Button Mouse is on.</label>
-    <label><input type="checkbox" id="s0-numpad"> Emulate Numpad is on.</label>
-    <label><input type="checkbox" id="s0-orbit"> Command + drag rotates the view.</label>
-  </div>
+  
 
   <div class="nav-row">
     <a href="../index.html">← All lessons</a>
     <a href="01-find-your-way.html">Next: Lesson 1 →</a>
   </div>
 </main>
+</div>
 <footer class="site">Lessons are original.</footer>
 <script src="../js/progress.js"></script>
 </body>

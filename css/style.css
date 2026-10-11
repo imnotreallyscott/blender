@@ -418,3 +418,38 @@ figure.fig.wide {
   transform: translateX(-50%);
 }
 figure.fig .shot img { cursor: zoom-in; }
+
+/* ============ LESSON LAYOUT: objectives panel ============ */
+.layout { max-width: 800px; margin: 0 auto; }
+.layout > main { max-width: none; margin: 0; padding: 8px 20px 64px; }
+.objectives { padding: 16px 20px 0; }
+.obj-label {
+  font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 4px;
+}
+.objectives .card { margin: 12px 0; }
+
+@media (min-width: 1180px) {
+  .layout {
+    max-width: 1220px;
+    display: grid;
+    grid-template-columns: 300px minmax(0, 800px);
+    gap: 36px;
+    justify-content: center;
+    align-items: start;
+    padding: 0 20px;
+  }
+  .objectives {
+    position: sticky;
+    top: 20px;
+    padding: 24px 0 0;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+  .layout > main { padding: 24px 0 64px; }
+}
+
+/* Phone-width guard: keep the objectives card inside the screen */
+.layout, .layout > main, .objectives { min-width: 0; box-sizing: border-box; }
+.layout { width: 100%; }
+.objectives { overflow-wrap: anywhere; }
