@@ -5,58 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lesson 3: Edit mode and vertices · Blender Basics</title>
 <link rel="stylesheet" href="../css/style.css">
+<script src="../js/theme.js"></script>
 </head>
 <body>
-<header class="site"><a href="../index.html">Blender Basics · scottaferguson.org</a></header>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
 <main>
   <h1>Lesson 3: Edit mode and vertices</h1>
-  <p class="meta">About 14 minutes · Blender 5.2 LTS · Mac Mini</p>
+  <p class="meta">About 14 minutes · Blender 5.2 LTS · Mac Mini + Magic Mouse</p>
 
   <div class="card goal">
-    <strong>Goal:</strong> Switch into Edit Mode, select vertices, and change a shape by moving its corners.
+    <strong>Goal:</strong> Enter Edit Mode, select corners (vertices), and change a shape. Then build a tilted shield plate.
   </div>
 
   <h2>Object Mode vs Edit Mode</h2>
-  <p>Object Mode moves whole objects. Edit Mode lets you change the shape inside an object. Press <kbd>Tab</kbd> to switch between them. Press <kbd>Tab</kbd> again to go back.</p>
+  <p>Object Mode moves whole objects. Edit Mode changes the shape inside one object. Press <kbd>Tab</kbd> to switch. Press <kbd>Tab</kbd> again to switch back.</p>
 
-  <h2>The three select modes</h2>
-  <ul>
-    <li><kbd>1</kbd> = Vertex (corner points)</li>
-    <li><kbd>2</kbd> = Edge (lines between corners)</li>
-    <li><kbd>3</kbd> = Face (flat surfaces)</li>
-  </ul>
-  <p>Use the number keys on the top row. If they change the view instead, your Numpad emulation setting is on (see Lesson 1). <span class="unverified">Confirm on your machine.</span></p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230" role="img" aria-label="Object Mode and Edit Mode, and the three select modes">
+      <rect class="f-panel" x="6" y="6" width="628" height="218" rx="12"/>
+      <!-- object mode -->
+      <rect x="30" y="30" width="180" height="150" rx="12" class="f-bg"/>
+      <text x="120" y="56" text-anchor="middle" font-size="15" font-weight="700" class="f-text">Object Mode</text>
+      <polygon points="80,110 130,110 130,160 80,160" class="f-face-m"/>
+      <polygon points="80,110 96,96 146,96 130,110" class="f-face-l"/>
+      <polygon points="130,110 146,96 146,146 130,160" class="f-face-d"/>
+      <text x="120" y="172" text-anchor="middle" font-size="12" class="f-muted">whole object moves</text>
+      <!-- Tab arrow -->
+      <text x="232" y="110" text-anchor="middle" font-size="20" font-weight="800" class="f-accent">Tab</text>
+      <line x1="220" y1="120" x2="250" y2="120" stroke="#0b4f9c" stroke-width="3"/>
+      <!-- edit mode -->
+      <rect x="260" y="30" width="200" height="150" rx="12" class="f-bg"/>
+      <text x="360" y="56" text-anchor="middle" font-size="15" font-weight="700" class="f-text">Edit Mode</text>
+      <polygon points="300,110 350,110 350,160 300,160" class="f-face-m" opacity=".5"/>
+      <g fill="#ff9a2e"><circle cx="300" cy="110" r="5"/><circle cx="350" cy="110" r="5"/><circle cx="300" cy="160" r="5"/><circle cx="350" cy="160" r="5"/></g>
+      <text x="360" y="172" text-anchor="middle" font-size="12" class="f-muted">corners (dots) are selectable</text>
+      <!-- select modes -->
+      <rect x="480" y="30" width="140" height="150" rx="12" class="f-bg"/>
+      <text x="550" y="56" text-anchor="middle" font-size="15" font-weight="700" class="f-text">Select modes</text>
+      <text x="500" y="90" font-size="16" class="f-text"><tspan font-weight="800" class="f-accent">1</tspan>  Vertex (dots)</text>
+      <text x="500" y="118" font-size="16" class="f-text"><tspan font-weight="800" class="f-accent">2</tspan>  Edge (lines)</text>
+      <text x="500" y="146" font-size="16" class="f-text"><tspan font-weight="800" class="f-accent">3</tspan>  Face (surfaces)</text>
+      <text x="30" y="210" font-size="13" class="f-muted">Number keys need the Numpad setting from the Mac setup page.</text>
+    </svg>
+    <figcaption><strong>What you should see:</strong> in Edit Mode, orange dots appear on the corners. That means you can change the shape.</figcaption>
+  </figure>
 
   <h2>Steps</h2>
   <ol class="steps">
-    <li>Select the cube in Object Mode, then press <kbd>Tab</kbd> to enter Edit Mode. You should see small dots on its corners.</li>
-    <li>Press <kbd>1</kbd> for vertex select. Click one corner dot. It turns orange.</li>
-    <li>Press <kbd>G</kbd> and move it. Only that corner moves. Press <kbd>Esc</kbd> to cancel.</li>
-    <li>Press <kbd>A</kbd> to select everything. Press <kbd>A</kbd> again to deselect all. Use <kbd>Alt</kbd> + <kbd>A</kbd> to deselect as well (confirm this on your Mac).</li>
-    <li>Select the top four corners with a box: drag a rectangle around them with the left mouse button held. Press <kbd>S</kbd>, then <kbd>0.5</kbd> and <kbd>Enter</kbd> to shrink the top.</li>
-    <li>Press <kbd>Tab</kbd> to return to Object Mode.</li>
+    <li><span class="chip chip-tool">Tool</span> Select the cube in Object Mode by clicking it.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd>. Dots appear on the corners.</li>
+    <li><span class="chip">Key</span> Press <kbd>1</kbd> for vertex select.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Click one corner dot. It turns orange.</li>
+    <li><span class="chip">Key</span> Press <kbd>G</kbd> and move the mouse. Only that corner moves. Press <kbd>Esc</kbd> to cancel.</li>
+    <li><span class="chip chip-mouse">Mouse</span> <strong>Box select.</strong> Hold the left mouse button on empty space and drag a rectangle around the top four corners. Release. Those four are selected.</li>
+    <li><span class="chip">Key</span> Press <kbd>S</kbd>, then type <kbd>0.5</kbd>, then <kbd>Enter</kbd>. The top shrinks.</li>
+    <li><span class="chip">Key</span> Press <kbd>A</kbd> to select everything, then <kbd>A</kbd> again to deselect everything.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> to return to Object Mode.</li>
   </ol>
 
   <div class="card tip">
-    <strong>Common trap:</strong> If nothing moves, you are probably in Object Mode. Check the mode dropdown at the top left of the 3D Viewport.
+    <strong>Common trap:</strong> If nothing moves, you are probably in Object Mode. Check the mode menu at the top left of the 3D Viewport. It should say Edit Mode.
   </div>
 
   <h2>Project: tilted shield plate</h2>
-  <p>This is an original shield-shaped plate for later use. It is not a team logo. Start from a fresh cube.</p>
+  <p>An original shield shape for later use. It is not a team logo. Start from a new cube.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 280" role="img" aria-label="Finished shield plate with a tilted top edge">
+      <rect class="f-panel" x="6" y="6" width="628" height="268" rx="12"/>
+      <polygon points="200,60 440,60 440,150 320,240 200,150" class="f-face-m"/>
+      <polygon points="200,60 440,60 440,80 200,80" class="f-face-l"/>
+      <polygon points="440,60 440,150 320,240 320,150" class="f-face-d" opacity=".7"/>
+      <text x="320" y="264" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: flat top, sloped sides, pointed bottom</text>
+    </svg>
+    <figcaption><strong>Finished product:</strong> a shield-shaped plate with a flat top and sloped sides. Your version can differ, as long as the sides slope.</figcaption>
+  </figure>
+
   <ol class="steps">
-    <li>Add a new cube with <kbd>Shift</kbd> + <kbd>A</kbd>, then Mesh, then Cube. Press <kbd>Tab</kbd> to enter Edit Mode.</li>
-    <li>Press <kbd>3</kbd> for face select. Click the top face, then press <kbd>Delete</kbd> and choose Faces. You now have an open box.</li>
-    <li>Press <kbd>1</kbd> for vertex select. Select the bottom four corners and press <kbd>S</kbd>, <kbd>Z</kbd>, <kbd>0.1</kbd>, <kbd>Enter</kbd> to flatten them.</li>
-    <li>Select the bottom two corners on one side and press <kbd>G</kbd>, <kbd>Z</kbd>, move up slightly. This creates a shield slope. Repeat on the other side.</li>
-    <li>Press <kbd>Tab</kbd> to leave Edit Mode and save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
+    <li><span class="chip chip-tool">Tool</span> Add a cube: press <kbd>Shift</kbd> + <kbd>A</kbd>, then choose <strong>Mesh &gt; Cube</strong>. <span class="verify">menu names unverified in 5.2</span></li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode, then <kbd>3</kbd> for face select.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Click the top face to select it.</li>
+    <li><span class="chip">Key</span> Press <kbd>Delete</kbd> and choose <strong>Faces</strong>. The top is open now.</li>
+    <li><span class="chip">Key</span> Press <kbd>1</kbd> for vertex select. Select the bottom four corners.</li>
+    <li><span class="chip">Key</span> Press <kbd>S</kbd>, <kbd>Z</kbd>, type <kbd>0.1</kbd>, <kbd>Enter</kbd> to flatten the bottom.</li>
+    <li><span class="chip">Key</span> Select the two bottom corners on the left, press <kbd>G</kbd>, <kbd>Z</kbd>, and move up a little. Repeat on the right side.</li>
+    <li><span class="chip chip-check">Check</span> The sides slope inward toward the bottom, like a shield.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> to leave Edit Mode, then <kbd>Cmd</kbd> + <kbd>S</kbd> to save.</li>
   </ol>
 
   <div class="card checkpoint done-check">
     <strong>You are done when:</strong>
     <label><input type="checkbox" id="l3-tab"> I switch between Object Mode and Edit Mode with <kbd>Tab</kbd>.</label>
-    <label><input type="checkbox" id="l3-vertex"> I moved one vertex by itself.</label>
-    <label><input type="checkbox" id="l3-select"> I selected several vertices with a box.</label>
-    <label><input type="checkbox" id="l3-project"> My shield plate is saved, with a clear slope.</label>
+    <label><input type="checkbox" id="l3-vertex"> I moved one corner by itself.</label>
+    <label><input type="checkbox" id="l3-select"> I selected several corners with a box.</label>
+    <label><input type="checkbox" id="l3-project"> My shield plate is saved with sloped sides.</label>
   </div>
 
   <div class="nav-row">

@@ -5,32 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blender Basics for Beginners</title>
 <link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
 </head>
 <body>
-<header class="site"><a href="index.html">Blender Basics · scottaferguson.org</a></header>
+<header class="site">
+  <a class="brand" href="index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
 <main>
-  <h1>Learn Blender, one short lesson at a time</h1>
-  <p class="meta">Written for Blender 5.2 LTS on a Mac Mini. Each lesson takes about 10 to 15 minutes and ends with a small project you can finish and see.</p>
+  <section class="hero">
+    <h1>Learn Blender, one short lesson at a time</h1>
+    <p>Written for Blender 5.2 LTS on a Mac Mini with a Magic Mouse. Each lesson takes 10 to 15 minutes and ends with a small project you can finish and see.</p>
+  </section>
 
   <div class="card goal">
     <strong>How to use this site</strong>
     <ol class="steps">
-      <li>Open Blender and keep this page in a second window.</li>
-      <li>Do one lesson. Stop when the timer or your energy runs out.</li>
-      <li>Tick the boxes at the end. Your progress is saved in this browser.</li>
+      <li>Do the <a href="lessons/00-mac-setup.html">Mac setup page</a> once. It turns your Magic Mouse into a 3-button mouse for Blender.</li>
+      <li>Open Blender in one window and this site in another.</li>
+      <li>Do one lesson. Stop when your timer or energy runs out.</li>
+      <li>Tick the boxes at the end. Progress is saved in this browser.</li>
     </ol>
   </div>
 
+  <div class="card tip">
+    <strong>Reminder labels you will see:</strong>
+    <p style="margin:8px 0 0">
+      <span class="chip">Key</span> a keyboard shortcut &nbsp;
+      <span class="chip chip-mouse">Mouse</span> a mouse or trackpad action &nbsp;
+      <span class="chip chip-menu">Menu</span> a menu or panel to open &nbsp;
+      <span class="chip chip-tool">Tool</span> a Blender tool to pick &nbsp;
+      <span class="chip chip-check">Check</span> what you should see now
+    </p>
+  </div>
+
   <h2>Lessons</h2>
-  <ul class="lessons">
-    <li><a href="lessons/01-find-your-way.html">Lesson 1: Find your way around</a><br>Move the view, pick things, save your file. <em>Project: a stacked "716" cube block.</em></li>
-    <li><a href="lessons/02-move-rotate-scale.html">Lesson 2: Move, rotate, scale</a><br>The three tools you will use for almost everything. <em>Project: a three-block bison-shaped stand.</em></li>
-    <li><a href="lessons/03-edit-mode.html">Lesson 3: Edit mode and vertices</a><br>Change the shape of an object, not just its position. <em>Project: a tilted shield plate.</em></li>
-    <li><a href="lessons/04-extrude.html">Lesson 4: Extrude</a><br>Pull a flat shape into 3D. <em>Project: a raised Buffalo-blue name tag.</em></li>
-    <li><a href="lessons/05-bevel-and-smooth.html">Lesson 5: Bevel and smooth</a><br>Round the hard edges so models look finished. <em>Project: a rounded coaster.</em></li>
+  <ul class="lesson-grid">
+    <li><span class="num">0</span><a href="lessons/00-mac-setup.html">Mac setup: Magic Mouse and Blender settings</a><p>Do this once before Lesson 1.</p></li>
+    <li><span class="num">1</span><a href="lessons/01-find-your-way.html">Find your way around</a><p>Move the view, select, save. Project: stacked "716" blocks.</p></li>
+    <li><span class="num">2</span><a href="lessons/02-move-rotate-scale.html">Move, rotate, scale</a><p>The three tools you'll use for almost everything. Project: a block stand.</p></li>
+    <li><span class="num">3</span><a href="lessons/03-edit-mode.html">Edit mode and vertices</a><p>Change a shape, not just its position. Project: a shield plate.</p></li>
+    <li><span class="num">4</span><a href="lessons/04-extrude.html">Extrude</a><p>Pull a flat shape into 3D. Project: a raised name tag.</p></li>
+    <li><span class="num">5</span><a href="lessons/05-bevel-and-smooth.html">Bevel and smooth</a><p>Round hard edges so models look finished. Project: a rounded coaster.</p></li>
   </ul>
 
-  <p class="meta">Coming next: more lessons, a Bills and Sabres inspired track using original designs, and bison models.</p>
+  <p class="meta" style="margin-top:28px">Coming next: a Bills and Sabres inspired track using original designs, and bison models.</p>
 </main>
 <footer class="site">Lessons are original. Team logos are not reproduced on this site.</footer>
 <script src="js/progress.js"></script>

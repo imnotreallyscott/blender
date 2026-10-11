@@ -5,52 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lesson 5: Bevel and smooth · Blender Basics</title>
 <link rel="stylesheet" href="../css/style.css">
+<script src="../js/theme.js"></script>
 </head>
 <body>
-<header class="site"><a href="../index.html">Blender Basics · scottaferguson.org</a></header>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
 <main>
   <h1>Lesson 5: Bevel and smooth</h1>
-  <p class="meta">About 15 minutes · Blender 5.2 LTS · Mac Mini</p>
+  <p class="meta">About 15 minutes · Blender 5.2 LTS · Mac Mini + Magic Mouse</p>
 
   <div class="card goal">
-    <strong>Goal:</strong> Round the hard edges with Bevel, then smooth the whole model with a Subdivision Surface modifier.
+    <strong>Goal:</strong> Round hard edges with Bevel, then smooth the whole model with a Subdivision Surface modifier. Then build a rounded coaster.
   </div>
 
   <h2>Two tools that make models look finished</h2>
   <ul>
-    <li><strong>Bevel</strong> (<kbd>Ctrl</kbd> + <kbd>B</kbd>, in Edit Mode): rounds an edge into a small slope.</li>
-    <li><strong>Subdivision Surface</strong> (a modifier): smooths the whole model. It does not change your original mesh. It only changes how it looks.</li>
+    <li><strong>Bevel</strong> (in Edit Mode): rounds an edge into a small slope.</li>
+    <li><strong>Subdivision Surface</strong> (a modifier): smooths the whole model. Your original shape stays the same. Only the look changes.</li>
   </ul>
 
+  <figure class="fig">
+    <svg viewBox="0 0 640 230" role="img" aria-label="Sharp edge versus beveled edge versus smoothed">
+      <rect class="f-panel" x="6" y="6" width="628" height="218" rx="12"/>
+      <!-- sharp -->
+      <text x="110" y="40" text-anchor="middle" font-size="14" font-weight="700" class="f-text">Sharp</text>
+      <polygon points="50,90 150,90 150,170 50,170" class="f-face-m"/>
+      <polygon points="50,90 70,70 170,70 150,90" class="f-face-l"/>
+      <!-- beveled -->
+      <text x="320" y="40" text-anchor="middle" font-size="14" font-weight="700" class="f-text">Bevel</text>
+      <path d="M260,90 L330,90 L340,100 L340,170 L260,170 L260,90 Z" class="f-face-m"/>
+      <path d="M260,90 L330,90 L340,100 L260,100 Z" class="f-face-l"/>
+      <path d="M330,90 L340,100 L340,170 L330,160 Z" class="f-face-d"/>
+      <!-- smoothed -->
+      <text x="530" y="40" text-anchor="middle" font-size="14" font-weight="700" class="f-text">Smoothed</text>
+      <rect x="470" y="88" width="120" height="84" rx="26" class="f-face-m"/>
+      <text x="320" y="210" text-anchor="middle" font-size="13" class="f-muted">Bevel = the edge gets a slope. Subdivision = the whole shape gets softer.</text>
+    </svg>
+    <figcaption><strong>What you should see:</strong> the sharp corners become slopes, then soft curves.</figcaption>
+  </figure>
+
   <div class="card tip">
-    <strong>Modifier panel:</strong> Select the object, then click the wrench icon in the Properties panel. Add modifiers from there. Panel names and icon positions can change between versions, so <span class="unverified">confirm the wrench icon location on your 5.2 install</span>.
+    <strong>Modifier panel:</strong> select the object, then open the <strong>Modifier</strong> tab (the wrench icon) in the Properties panel on the right. <span class="verify">unverified icon location in 5.2</span>
   </div>
 
   <h2>Steps</h2>
   <ol class="steps">
-    <li>Select a cube and press <kbd>Tab</kbd> for Edit Mode. Press <kbd>2</kbd> for edge select.</li>
-    <li>Click one edge. Press <kbd>Ctrl</kbd> + <kbd>B</kbd>, move the mouse slightly, and click. The edge is now rounded.</li>
-    <li>Press <kbd>Tab</kbd> to return to Object Mode.</li>
-    <li>Open the wrench (Modifier) panel. Add a <strong>Subdivision Surface</strong> modifier. Set Levels Viewport to 2.</li>
-    <li>Save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
+    <li><span class="chip chip-tool">Tool</span> Select a cube and press <kbd>Tab</kbd> for Edit Mode.</li>
+    <li><span class="chip">Key</span> Press <kbd>2</kbd> for edge select.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Click one edge. It turns orange.</li>
+    <li><span class="chip">Key</span> Press <kbd>Ctrl</kbd> + <kbd>B</kbd>. Move the mouse slightly and click. <span class="verify">Ctrl+B unverified on Mac</span></li>
+    <li><span class="chip chip-check">Check</span> The edge now has a narrow slope instead of a sharp corner.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> to return to Object Mode.</li>
+    <li><span class="chip chip-menu">Menu</span> Open the Modifier tab (wrench). Click <strong>Add Modifier</strong>, then <strong>Generate &gt; Subdivision Surface</strong>. <span class="verify">unverified menu names</span></li>
+    <li><span class="chip">Key</span> In the modifier, set <strong>Levels Viewport</strong> to <kbd>2</kbd>.</li>
+    <li><span class="chip chip-check">Check</span> The cube looks soft and rounded, but the outline still matches the original shape.</li>
+    <li><span class="chip">Key</span> Save with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
   </ol>
 
   <h2>Project: rounded coaster</h2>
-  <p>A coaster is a flat cylinder with rounded edges. It is a good first finished model. The colors are your choice. Blue and gold are a suggestion, not a requirement.</p>
+  <p>A flat disc with rounded edges. Colors are your choice later.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 260" role="img" aria-label="Finished coaster: a flat disc with soft rounded edges">
+      <rect class="f-panel" x="6" y="6" width="628" height="248" rx="12"/>
+      <ellipse cx="320" cy="150" rx="150" ry="58" class="f-face-d"/>
+      <ellipse cx="320" cy="140" rx="150" ry="58" class="f-face-m"/>
+      <ellipse cx="320" cy="140" rx="128" ry="46" class="f-face-l" opacity=".55"/>
+      <text x="320" y="236" text-anchor="middle" font-size="15" class="f-text" font-weight="700">Finished: flat disc with rounded edges</text>
+    </svg>
+    <figcaption><strong>Finished product:</strong> a flat round coaster with a soft edge. The edge should look rounded, not sharp.</figcaption>
+  </figure>
+
   <ol class="steps">
-    <li>Add a cylinder with <kbd>Shift</kbd> + <kbd>A</kbd>, then Mesh, then Cylinder. In the Adjust Last Operation panel, set Vertices to 32 and Radius to 1.</li>
-    <li>Press <kbd>S</kbd>, <kbd>Z</kbd>, <kbd>0.15</kbd>, <kbd>Enter</kbd> to make it flat, like a coaster.</li>
-    <li>Enter Edit Mode with <kbd>Tab</kbd>. Press <kbd>2</kbd>, then <kbd>A</kbd> to select everything, and press <kbd>Ctrl</kbd> + <kbd>B</kbd>. Move slightly and click to round the edges.</li>
-    <li>Press <kbd>Tab</kbd>. Add a Subdivision Surface modifier and set Levels Viewport to 2.</li>
-    <li>Save as <code>coaster.blend</code>.</li>
+    <li><span class="chip chip-tool">Tool</span> Add a cylinder: <kbd>Shift</kbd> + <kbd>A</kbd>, then <strong>Mesh &gt; Cylinder</strong>.</li>
+    <li><span class="chip chip-menu">Menu</span> In the <strong>Adjust Last Operation</strong> panel (bottom left), set <strong>Vertices</strong> to 32 and <strong>Radius</strong> to 1. <span class="verify">panel name unverified</span></li>
+    <li><span class="chip">Key</span> Press <kbd>S</kbd>, <kbd>Z</kbd>, type <kbd>0.15</kbd>, <kbd>Enter</kbd>. It becomes flat.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd>, then <kbd>2</kbd> for edge select.</li>
+    <li><span class="chip">Key</span> Press <kbd>A</kbd> to select all edges.</li>
+    <li><span class="chip">Key</span> Press <kbd>Ctrl</kbd> + <kbd>B</kbd>, move slightly, click to round the edges.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd>. Add a Subdivision Surface modifier and set Levels Viewport to 2.</li>
+    <li><span class="chip">Key</span> Save as <code>coaster.blend</code> with <kbd>Cmd</kbd> + <kbd>S</kbd>.</li>
   </ol>
 
   <div class="card checkpoint done-check">
     <strong>You are done when:</strong>
-    <label><input type="checkbox" id="l5-bevel"> I rounded an edge with <kbd>Ctrl</kbd> + <kbd>B</kbd>.</label>
+    <label><input type="checkbox" id="l5-bevel"> I rounded an edge with the bevel command.</label>
     <label><input type="checkbox" id="l5-subd"> I added a Subdivision Surface modifier.</label>
-    <label><input type="checkbox" id="l5-coaster"> My rounded coaster is saved as <code>coaster.blend</code>.</label>
-    <label><input type="checkbox" id="l5-five"> I finished all five lessons. Good work.</label>
+    <label><input type="checkbox" id="l5-coaster"> My coaster is saved as <code>coaster.blend</code>.</label>
+    <label><input type="checkbox" id="l5-five"> I finished the first five lessons. Good work.</label>
   </div>
 
   <div class="nav-row">

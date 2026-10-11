@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mac setup: Magic Mouse · Blender Basics</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="../index.html">Blender Basics · scottaferguson.org</a>
+  <button id="theme-toggle" type="button">Switch to dark mode</button>
+</header>
+<main>
+  <h1>Mac setup: Magic Mouse and Blender settings</h1>
+  <p class="meta">About 10 minutes · do this once · Mac Mini + Magic Mouse</p>
+
+  <div class="card goal">
+    <strong>Goal:</strong> Make the Magic Mouse work for Blender's 3D view, and turn on the number-key setting.
+  </div>
+
+  <h2>Why this step exists</h2>
+  <p>Blender uses a middle mouse button to move around the 3D view. The Magic Mouse has no middle button. Blender has a setting that lets you do the same thing with Option + click. Turn it on once, and every lesson will work.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 300" role="img" aria-label="Magic Mouse controls for Blender">
+      <rect class="f-panel" x="8" y="8" width="624" height="284" rx="14"/>
+      <!-- mouse body -->
+      <rect class="f-body" x="250" y="50" width="140" height="210" rx="70"/>
+      <line class="f-stroke-m" x1="320" y1="50" x2="320" y2="140"/>
+      <!-- scroll area highlight -->
+      <rect x="290" y="70" width="60" height="50" rx="10" class="f-gold" opacity=".55"/>
+      <text class="f-text" x="320" y="40" text-anchor="middle" font-size="16" font-weight="700">Magic Mouse (top view)</text>
+      <!-- labels -->
+      <line class="f-stroke-m" x1="250" y1="170" x2="130" y2="170"/>
+      <text class="f-text" x="20" y="165" font-size="15" font-weight="700">Option + drag</text>
+      <text class="f-muted" x="20" y="186" font-size="13">= orbit (rotate the view)</text>
+      <line class="f-stroke-m" x1="390" y1="95" x2="520" y2="95"/>
+      <text class="f-text" x="526" y="90" font-size="15" font-weight="700">Swipe on surface</text>
+      <text class="f-muted" x="526" y="110" font-size="13">= scroll / zoom</text>
+      <line class="f-stroke-m" x1="390" y1="210" x2="520" y2="210"/>
+      <text class="f-text" x="526" y="205" font-size="15" font-weight="700">Shift + Option + drag</text>
+      <text class="f-muted" x="526" y="225" font-size="13">= pan (move the view sideways)</text>
+    </svg>
+    <figcaption><strong>What you should see:</strong> after setup, dragging with Option held rotates the 3D view. Verify these three gestures on your Mac: <span class="verify">unverified</span> until you test them.</figcaption>
+  </figure>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li><span class="chip chip-menu">Menu</span> Open Blender. Click the <strong>Blender</strong> menu in the top-left of the screen, then choose <strong>Settings</strong>. <span class="verify">unverified label for 5.2</span> Some versions use <strong>Edit &gt; Preferences</strong> instead.</li>
+    <li><span class="chip chip-menu">Menu</span> In the Settings window, open the <strong>Input</strong> section <span class="verify">unverified</span>.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Turn on <strong>Emulate 3 Button Mouse</strong> <span class="verify">unverified name</span>. Leave the other options alone.</li>
+    <li><span class="chip">Key</span> Find <strong>Emulate Numpad</strong> <span class="verify">unverified name</span> in the same section and turn it on. This makes the top-row number keys (1, 2, 3, 7) change views and select modes, which later lessons use.</li>
+    <li><span class="chip">Key</span> Close the Settings window. Blender saves preferences automatically <span class="verify">unverified</span>.</li>
+    <li><span class="chip chip-check">Check</span> Press <kbd>Shift</kbd> + <kbd>A</kbd> in the 3D view. A menu should open. Press <kbd>Esc</kbd> to close it.</li>
+  </ol>
+
+  <div class="card tip">
+    <strong>If a label is different:</strong> Blender moves settings between versions. Look for the setting by name in the Settings search bar at the top of the window, and tell me what it says so I can fix this page.
+  </div>
+
+  <h2>Finished setup looks like</h2>
+  <figure class="fig">
+    <svg viewBox="0 0 640 170" role="img" aria-label="Settings checkboxes turned on">
+      <rect class="f-panel" x="8" y="8" width="624" height="154" rx="14"/>
+      <text class="f-text" x="30" y="46" font-size="17" font-weight="700">Input</text>
+      <rect x="30" y="64" width="22" height="22" rx="5" class="f-accent"/>
+      <path d="M35 75 l5 5 l9 -10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text class="f-text" x="66" y="81" font-size="16">Emulate 3 Button Mouse</text>
+      <rect x="30" y="100" width="22" height="22" rx="5" class="f-accent"/>
+      <path d="M35 111 l5 5 l9 -10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text class="f-text" x="66" y="117" font-size="16">Emulate Numpad</text>
+    </svg>
+    <figcaption><strong>Finished:</strong> both boxes are checked. The exact names may differ slightly on your version.</figcaption>
+  </figure>
+
+  <div class="card checkpoint done-check">
+    <strong>You are done when:</strong>
+    <label><input type="checkbox" id="s0-settings"> I found the Input section in Blender Settings.</label>
+    <label><input type="checkbox" id="s0-mouse"> Emulate 3 Button Mouse is on.</label>
+    <label><input type="checkbox" id="s0-numpad"> Emulate Numpad is on.</label>
+    <label><input type="checkbox" id="s0-orbit"> Option + drag rotates the view in Blender.</label>
+  </div>
+
+  <div class="nav-row">
+    <a href="../index.html">← All lessons</a>
+    <a href="01-find-your-way.html">Next: Lesson 1 →</a>
+  </div>
+</main>
+<footer class="site">Lessons are original.</footer>
+<script src="../js/progress.js"></script>
+</body>
+</html>
