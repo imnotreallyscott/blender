@@ -20,7 +20,7 @@
   </div>
   <div class="card checkpoint done-check">
     <strong>You are done when:</strong>
-    <label><input type="checkbox" id="l7-delete"> I deleted one side of a cube.</label>
+    <label><input type="checkbox" id="l7-delete"> I cut a cube in half and deleted one side.</label>
     <label><input type="checkbox" id="l7-add"> I added a Mirror modifier.</label>
     <label><input type="checkbox" id="l7-follow"> I changed one side and the other side followed.</label>
     <label><input type="checkbox" id="l7-save"> My mirror block is saved.</label>
@@ -33,32 +33,34 @@
   <h2>What Mirror does</h2>
   <p>Most real objects are symmetric, like a mug, a helmet, or a logo shape. The Mirror modifier copies your geometry across an axis, so you only model one half. A <strong>modifier</strong> is a setting that changes the object without changing the original mesh. You can turn it off or change it at any time.</p>
 
-  <figure class="fig">
-    <span class="fig-label">Real screenshot from the Blender manual</span>
-    <img src="../img/manual/modeling_modifiers_generate_mirror_panel.png" alt="Mirror modifier panel with the X axis button highlighted in blue">
-    <figcaption><strong>What to look at:</strong> the <strong>Axis</strong> row. X is highlighted in blue, which means the copy is made across the X axis. That is the default you will use in this lesson.</figcaption>
-    <p class="attrib">Image: <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/mirror.html">Blender Manual</a> by the Blender Documentation Team, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Shared unchanged.</p>
+  <figure class="fig wide">
+    <span class="fig-label">Real screenshot · Blender 5.2.1</span>
+    <a href="../img/blender-5.2.1/l07-mirror.png" target="_blank" rel="noopener" title="Open full-size screenshot"><img src="../img/blender-5.2.1/l07-mirror.png" alt="Half a cube with a Mirror modifier; Axis X is highlighted and one corner pulled out is copied to the other side"></a>
+    <figcaption><strong>What to look at:</strong> the <strong>Axis</strong> row, where X is blue. Only the right half is real. One corner was pulled out, and the Mirror copied it to the left.</figcaption>
   </figure>
 
   <h2>Steps</h2>
   <ol class="steps">
-    <li><span class="chip chip-tool">Tool</span> Add a cube: press <kbd>Shift</kbd> + <kbd>A</kbd>, then <strong>Mesh &gt; Cube</strong>. <span class="verify">menu path unverified in 5.2.1</span></li>
-    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode, then <kbd>1</kbd> for vertex select.</li>
-    <li><span class="chip chip-mouse">Mouse</span> Rotate the view with <kbd>Cmd</kbd> + drag until the <strong>left side</strong> of the cube faces you. Hold the left mouse button on empty space and drag a box around the four corners on that side. Release.</li>
-    <li><span class="chip">Key</span> Press <kbd>X</kbd> and choose <strong>Vertices</strong>. The left side is gone. <span class="verify">the delete menu label is unverified in 5.2.1</span></li>
+    <li><span class="chip chip-tool">Tool</span> Add a cube: press <kbd>Shift</kbd> + <kbd>A</kbd>, then <strong>Mesh &gt; Cube</strong>.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode. Click the <strong>vertex select</strong> icon, the first of the three small icons next to <strong>Edit Mode</strong> at the top left.</li>
+    <li><span class="chip">Key</span> Cut the cube down the middle. Hover over the cube's top front edge, the one that runs left to right. Press <kbd>Ctrl</kbd> + <kbd>R</kbd>, and a yellow line appears down the middle. Click once, then <strong>right-click</strong> so the line stays centered.</li>
+    <li><span class="chip chip-menu">Menu</span> In the 3D View, choose <strong>View &gt; Viewpoint &gt; Front</strong>. Then press <kbd>Option</kbd> + <kbd>Z</kbd> to see through the cube.</li>
+    <li><span class="chip chip-mouse">Mouse</span> Drag a box around the <strong>left half</strong>, covering every corner left of the middle line. Those corners turn orange.
+      <a href="../img/blender-5.2.1/l07-step-select.png" target="_blank" rel="noopener" title="Open full-size screenshot"><img src="../img/blender-5.2.1/l07-step-select.png" alt="Front view in Edit Mode: the cube has a line down the middle, and the left side's corners are selected in orange" style="display:block;max-width:100%;height:auto;border-radius:10px;margin-top:10px"></a></li>
+    <li><span class="chip">Key</span> Press <kbd>X</kbd> and choose <strong>Vertices</strong>. The left half is gone, and you can see inside the open box. Press <kbd>Option</kbd> + <kbd>Z</kbd> again to stop seeing through.</li>
     <li><span class="chip">Key</span> Press <kbd>Tab</kbd> to return to Object Mode.</li>
-    <li><span class="chip chip-menu">Menu</span> In the <strong>Properties</strong> panel, click the blue <strong>wrench</strong> tab (Modifiers). Click <strong>Add Modifier</strong>, then <strong>Generate &gt; Mirror</strong>. The button is at the top of the Modifiers tab, per the manual.</li>
-    <li><span class="chip chip-check">Check</span> A full cube appears again, with both sides matching. The <strong>Axis X</strong> button is blue.</li>
+    <li><span class="chip chip-menu">Menu</span> In the <strong>Properties</strong> panel, click the blue <strong>wrench</strong> tab (Modifiers). Click <strong>Add Modifier</strong>, then <strong>Generate &gt; Mirror</strong>.</li>
+    <li><span class="chip chip-check">Check</span> The full cube is back, and both sides match. The <strong>Axis X</strong> button is blue.</li>
     <li><span class="chip">Key</span> Press <kbd>Tab</kbd> for Edit Mode. Click a corner on the <strong>right</strong> side, press <kbd>G</kbd>, and move it. Click to confirm.</li>
     <li><span class="chip chip-check">Check</span> The left side moved too. Blender copied your change across the middle.</li>
   </ol>
 
   <div class="card tip">
-    <strong>Why the cube looks cut in half at first:</strong> the mirror copies only the geometry that exists. Your remaining half is copied to the other side. The Merge setting joins the seam in the middle.
+    <strong>Why cut the middle first:</strong> a plain cube has corners only at its edges, not in the middle. Without the cut, deleting the left side leaves one flat wall, and Mirror can only copy that wall. The cut gives you a clean half box, and Mirror's <strong>Merge</strong> setting seals the seam.
   </div>
 
   <h2>Project: mirror block</h2>
-  <p>A symmetric block made from one half. Start from a new cube, delete one side, and mirror it. Save as <code>mirror-block.blend</code>.</p>
+  <p>A symmetric block made from one half. Start from a new cube, cut it down the middle, delete the left half, and mirror it. Save as <code>mirror-block.blend</code>.</p>
 
   <figure class="fig">
     <svg viewBox="0 0 640 220" role="img" aria-label="Finished mirror block with two matching halves">

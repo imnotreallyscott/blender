@@ -38,11 +38,10 @@
     <li><strong>Subdivision Surface</strong> (a modifier): smooths the whole model. Your original shape stays the same. Only the look changes.</li>
   </ul>
 
-  <figure class="fig">
-    <span class="fig-label">Real screenshot</span>
-    <img src="../img/manual/modeling_modifiers_generate_subdivision-surface_panel.png" alt="Subdivision Surface modifier panel showing Levels Viewport and Render settings">
-    <figcaption><strong>What you should see:</strong> the Subdivision Surface panel. Set <strong>Levels Viewport</strong> to 2 as the lesson says. The manual shows the default, which is 1.</figcaption>
-    <p class="attrib">Image: <a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html">Blender Manual</a> by the Blender Documentation Team, licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Shared unchanged.</p>
+  <figure class="fig wide">
+    <span class="fig-label">Real screenshot · Blender 5.2.1</span>
+    <a href="../img/blender-5.2.1/l05-subsurf.png" target="_blank" rel="noopener" title="Open full-size screenshot"><img src="../img/blender-5.2.1/l05-subsurf.png" alt="Rounded block with a Subdivision Surface modifier, Levels Viewport set to 2"></a>
+    <figcaption><strong>What you should see:</strong> the Subdivision Surface panel with <strong>Levels Viewport</strong> at 2. This block had its edges beveled first, so it keeps its shape with soft corners. A plain cube with no bevel turns into a ball.</figcaption>
   </figure>
 
   <div class="card tip">
@@ -52,7 +51,7 @@
   <h2>Steps</h2>
   <ol class="steps">
     <li><span class="chip chip-tool">Tool</span> Select a cube and press <kbd>Tab</kbd> for Edit Mode.</li>
-    <li><span class="chip">Key</span> Press <kbd>2</kbd> for edge select.</li>
+    <li><span class="chip">Key</span> Click the <strong>edge select</strong> icon (the middle of the three small icons next to <strong>Edit Mode</strong>).</li>
     <li><span class="chip chip-mouse">Mouse</span> Click one edge. It turns orange.</li>
     <li><span class="chip">Key</span> Press <kbd>Ctrl</kbd> + <kbd>B</kbd>. Move the mouse slightly and click. <span class="verify">Ctrl+B unverified on Mac</span></li>
     <li><span class="chip chip-check">Check</span> The edge now has a narrow slope instead of a sharp corner.</li>
@@ -81,7 +80,7 @@
     <li><span class="chip chip-tool">Tool</span> Add a cylinder: <kbd>Shift</kbd> + <kbd>A</kbd>, then <strong>Mesh &gt; Cylinder</strong>.</li>
     <li><span class="chip chip-menu">Menu</span> In the <strong>Adjust Last Operation</strong> panel (bottom left), set <strong>Vertices</strong> to 32 and <strong>Radius</strong> to 1. <span class="verify">panel name unverified</span></li>
     <li><span class="chip">Key</span> Press <kbd>S</kbd>, <kbd>Z</kbd>, type <kbd>0.15</kbd>, <kbd>Enter</kbd>. It becomes flat.</li>
-    <li><span class="chip">Key</span> Press <kbd>Tab</kbd>, then <kbd>2</kbd> for edge select.</li>
+    <li><span class="chip">Key</span> Press <kbd>Tab</kbd>, then click the <strong>edge select</strong> icon (the middle of the three small icons next to <strong>Edit Mode</strong>).</li>
     <li><span class="chip">Key</span> Press <kbd>A</kbd> to select all edges.</li>
     <li><span class="chip">Key</span> Press <kbd>Ctrl</kbd> + <kbd>B</kbd>, move slightly, click to round the edges.</li>
     <li><span class="chip">Key</span> Press <kbd>Tab</kbd>. Add a Subdivision Surface modifier and set Levels Viewport to 2.</li>
